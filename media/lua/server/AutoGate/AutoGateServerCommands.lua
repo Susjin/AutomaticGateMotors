@@ -3,14 +3,17 @@
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the methods related to the ServerCommands are listed in this file
-    local ServerCommands = {}
+--- @class AutoGateServerCommands
+--- @return AutoGateServerCommands
+    local AutoGateServerCommands = {}
 ----------------------------------------------------------------------------------------------
----Getting the Utils file
-local ISAutoGateUtils = require "ISAutoGateUtils"
+--Setting up locals
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
-local onClientCommand = function(module, command, player, args)
+AutoGateServerCommands.onClientCommand = function(module, command, player, args)
     if isServer() then
         if module == "AutoGate" then
             if command == "install" then
@@ -19,8 +22,13 @@ local onClientCommand = function(module, command, player, args)
                 ISAutoGateUtils.consumeBatteryMP(args)
             end
             sendServerCommand(module, command, args)
+            ISAutoGateUtils.debugMessage(string.format("From player: %s", tostring(player)))
         end
     end
 end
 
-Events.OnClientCommand.Add(onClientCommand)
+--Add functions to events
+Events.OnClientCommand.Add(AutoGateServerCommands.onClientCommand)
+
+------------------ Returning file for 'require' ------------------
+return AutoGateServerCommands

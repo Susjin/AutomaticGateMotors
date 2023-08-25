@@ -3,7 +3,7 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
---- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the methods related to all Controller Interactions are listed in this file
 ---	@class ISAutoGateControllerAction : ISBaseTimedAction
@@ -17,7 +17,7 @@ require "TimedActions/ISBaseTimedAction"
 	local ISAutoGateControllerAction = ISBaseTimedAction:derive("ISAutoGateControllerAction")
 ----------------------------------------------------------------------------------------------
 --Setting up locals
-local ISAutoGateUtils = require "ISAutoGateUtils"
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 local textsTypes = {
 	disconnect = getText("IGUI_AutoGate_ClearingController"),

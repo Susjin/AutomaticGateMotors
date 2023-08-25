@@ -1,8 +1,9 @@
 
 ----------------------------------------------------------------------------------------------
 ---	Automatic Gate Motors
----	@author: peteR_pg
+---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 --- All the Utilities methods used in other files are listed in this file
 --- @class ISAutoGateUtils
@@ -58,13 +59,21 @@ AutoGateVars.BatteryMaxDeltaUse = (1/ AutoGateVars.BatteryMaxUseCount)
 
 --[[**********************************************************************************]]--
 
------------------- Functions related to miscellaneous utils ------------------,
+------------------ Functions related to miscellaneous utils ------------------
 
 ---Checks if the gateModData's name is valid
 ---@param gateNameModData string Name of the gate
 ---@return boolean True if gate name is valid, false if invalid
 function ISAutoGateUtils.predicateGateName(gateNameModData)
 	return (gateNameModData ~= nil) and (gateNameModData ~= "")
+end
+
+---Check if player has blowtorch and weldingmask
+---@param player IsoPlayer Player
+function ISAutoGateUtils.predicateInstallOption(player)
+	local playerInventory = player:getInventory()
+	if (playerInventory:contains("BlowTorch", true) and playerInventory:contains("WeldingMask", true) and player:isRecipeKnown("CanInstallGate")) or
+			ISBuildMenu.cheat then return true else return false end
 end
 
 ---Returns the given number rounded with the number of decimal places in param2 (0 by default)

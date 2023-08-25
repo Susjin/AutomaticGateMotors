@@ -3,7 +3,7 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
---- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the methods related to all Gate Interactions are listed in this file
 ---	@class ISAutoGateInteractAction : ISBaseTimedAction
@@ -16,7 +16,7 @@ require "TimedActions/ISBaseTimedAction"
 ----------------------------------------------------------------------------------------------
 
 --Setting up locals
-local ISAutoGateUtils = require "ISAutoGateUtils"
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 local textsTypes = {
 	reset = getText("IGUI_AutoGate_GateResetting"),

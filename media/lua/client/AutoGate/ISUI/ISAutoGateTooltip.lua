@@ -3,6 +3,7 @@
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the Tooltips methods are listed in this file
 ---	@class ISAutoGateTooltip
@@ -11,7 +12,7 @@
 ----------------------------------------------------------------------------------------------
 
 ---Local tables to store all functions
-local ISAutoGateUtils = require "ISAutoGateUtils"
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 --Local variables
 local AutoGateVars   = SandboxVars.AutoGate

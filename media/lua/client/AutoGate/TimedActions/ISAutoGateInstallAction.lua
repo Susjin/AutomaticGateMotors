@@ -3,7 +3,7 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
---- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the methods related to the Automatic Gate Install Action are listed in this file
 ---	@class ISAutoGateInstallAction : ISBaseTimedAction
@@ -15,7 +15,7 @@ require "TimedActions/ISBaseTimedAction"
 	local ISAutoGateInstallAction = ISBaseTimedAction:derive("ISAutoGateInstallAction")
 ----------------------------------------------------------------------------------------------
 --Setting up locals
-local ISAutoGateUtils = require "ISAutoGateUtils"
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 ---Predicate WeldingMask
 ---@param player IsoPlayer
