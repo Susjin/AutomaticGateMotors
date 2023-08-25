@@ -4,10 +4,11 @@
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
 
----	@class AutoGateServerCommands:
 ---	All the methods related to the ServerCommands are listed in this file
+    local ServerCommands = {}
 ----------------------------------------------------------------------------------------------
-
+---Getting the Utils file
+local ISAutoGateUtils = require "ISAutoGateUtils"
 
 local onClientCommand = function(module, command, player, args)
     if isServer() then

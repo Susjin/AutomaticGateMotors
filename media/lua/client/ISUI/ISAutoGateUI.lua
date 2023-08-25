@@ -6,19 +6,16 @@
 
 ---	All the User Interface methods are listed in this file
 --- @class ISAutoGateUI
-	ISAutoGateUI = {}
+--- @return ISAutoGateUI
+	local ISAutoGateUI = {}
 ----------------------------------------------------------------------------------------------
 
---Local definitions
+---Local definitions
 local AutoGateVars = SandboxVars.AutoGate
 
---Local tables to store all functions
----@see ISAutoGateUtils
----@type ISAutoGateUtils
-local GateUtils = ISAutoGateUtils
----@see ISAutoGateTooltip
-local GateTooltip = ISAutoGateTooltip
----@see ISBlacksmithMenu
+---Local tables to store all functions
+local ISAutoGateUtils = require "ISAutoGateUtils"
+local ISAutoGateTooltip = require "ISUI/ISAutoGateTooltip"
 local BlowtorchUtils = ISBlacksmithMenu
 
 
@@ -44,7 +41,7 @@ function ISAutoGateUI.addOptionInstallAutomaticMotor(player, context, gate)
 	local components = playerInventory:getCountTypeRecurse("GateComponents")
 	local blowtorch = BlowtorchUtils.getBlowTorchWithMostUses(playerInventory)
 	local blowtorchUses = 0
-	local weldingrods = GateUtils.getWeldingRodsWithMostUses(playerInventory)
+	local weldingrods = ISAutoGateUtils.getWeldingRodsWithMostUses(playerInventory)
 	local weldingrodsUses = 0
 	local weldingmask = playerInventory:getCountTypeRecurse("WeldingMask")
 	------------------ Running checks ------------------
@@ -57,7 +54,7 @@ function ISAutoGateUI.addOptionInstallAutomaticMotor(player, context, gate)
 	then
 		installOption.notAvailable = true
 	end
-	GateTooltip.installGate(installOption, components, blowtorchUses, weldingrodsUses, weldingmask, metalWelding, gateOpen, gateName)
+	ISAutoGateTooltip.installGate(installOption, components, blowtorchUses, weldingrodsUses, weldingmask, metalWelding, gateOpen, gateName)
 end
 
 ---Executes the TimedAction Install
@@ -65,14 +62,14 @@ end
 ---@param gate IsoThumpable Gate without motor installed
 function ISAutoGateUI.queueInstallAutomaticGateMotor(player, gate)
     local playerSquare = player:getSquare()
-	local gateCornerObject = GateUtils.getGateFromSquare(GateUtils.getGateCorner(gate))
+	local gateCornerObject = ISAutoGateUtils.getGateFromSquare(ISAutoGateUtils.getGateCorner(gate))
 	
 	local gateSquare = gateCornerObject:getSquare()
 	local gateOppositeSquare = gateCornerObject:getOppositeSquare()
 	local doorSquare = gateOppositeSquare:DistTo(playerSquare) < gateSquare:DistTo(playerSquare) and gateOppositeSquare or gateSquare
 
 	ISTimedActionQueue.add(ISWalkToTimedAction:new(player, doorSquare))
-	local blowtorch, weldingrods = GateUtils.checkAndEquipInstallItems(player)
+	local blowtorch, weldingrods = ISAutoGateUtils.checkAndEquipInstallItems(player)
 	ISTimedActionQueue.add(ISAutoGateInstallAction:new(player, gateCornerObject, blowtorch, weldingrods))
 end
 
@@ -83,14 +80,14 @@ end
 ---@param gate IsoThumpable Gate with motor installed
 function ISAutoGateUI.connectControllerToGate(player, emptyController, gate)
 	local playerSquare = player:getSquare()
-	local gateCornerObject = GateUtils.getGateFromSquare(GateUtils.getGateCorner(gate))
+	local gateCornerObject = ISAutoGateUtils.getGateFromSquare(ISAutoGateUtils.getGateCorner(gate))
 
 	local gateSquare = gateCornerObject:getSquare()
 	local gateOppositeSquare = gateCornerObject:getOppositeSquare()
 	local doorSquare = (gateOppositeSquare:DistTo(playerSquare) < gateSquare:DistTo(playerSquare)) and gateOppositeSquare or gateSquare
 	ISTimedActionQueue.add(ISWalkToTimedAction:new(player, doorSquare))
 
-	local wrench, screwdriver, returnItems = GateUtils.checkInteractItem(player, "both")
+	local wrench, screwdriver, returnItems = ISAutoGateUtils.checkInteractItem(player, "both")
 	ISTimedActionQueue.add(ISAutoGateInteractAction:new(player, gate, wrench, "connect"))
 	ISTimedActionQueue.add(ISAutoGateControllerAction:new(player, screwdriver, emptyController, "connect", nil, gate))
 	ISCraftingUI.ReturnItemsToOriginalContainer(player, returnItems)
@@ -101,14 +98,14 @@ end
 ---@param gate IsoThumpable Gate with motor installed
 function ISAutoGateUI.resetGate(gate, player)
 	local playerSquare = player:getSquare()
-	local gateCornerObject = GateUtils.getGateFromSquare(GateUtils.getGateCorner(gate))
+	local gateCornerObject = ISAutoGateUtils.getGateFromSquare(ISAutoGateUtils.getGateCorner(gate))
 
 	local gateSquare = gateCornerObject:getSquare()
 	local gateOppositeSquare = gateCornerObject:getOppositeSquare()
 	local doorSquare = (gateOppositeSquare:DistTo(playerSquare) < gateSquare:DistTo(playerSquare)) and gateOppositeSquare or gateSquare
 	ISTimedActionQueue.add(ISWalkToTimedAction:new(player, doorSquare))
 
-	local wrench, returnItems = GateUtils.checkInteractItem(player, "gate")
+	local wrench, returnItems = ISAutoGateUtils.checkInteractItem(player, "gate")
 	ISTimedActionQueue.add(ISAutoGateInteractAction:new(player, gate, wrench, "reset"))
 	ISCraftingUI.ReturnItemsToOriginalContainer(player, returnItems)
 end
@@ -118,7 +115,7 @@ end
 ---@param fromConnectedController InventoryItem Controller with a connection
 ---@param toEmptyController InventoryItem Controller without a connection
 function ISAutoGateUI.copyControllerToAnother(player, fromConnectedController, toEmptyController)
-	local screwdriver, returnItems = GateUtils.checkInteractItem(player, "controller")
+	local screwdriver, returnItems = ISAutoGateUtils.checkInteractItem(player, "controller")
 	ISTimedActionQueue.add(ISAutoGateControllerAction:new(player, screwdriver, fromConnectedController, "copyStart", toEmptyController))
 	ISTimedActionQueue.add(ISAutoGateControllerAction:new(player, screwdriver, toEmptyController, "copyFinish", fromConnectedController))
 	ISCraftingUI.ReturnItemsToOriginalContainer(player, returnItems)
@@ -128,7 +125,7 @@ end
 ---@param player IsoPlayer Player
 ---@param connectedController InventoryItem Already connected controller
 function ISAutoGateUI.disconnectController(player, connectedController)
-	local screwdriver, returnItems = GateUtils.checkInteractItem(player, "controller")
+	local screwdriver, returnItems = ISAutoGateUtils.checkInteractItem(player, "controller")
 	ISTimedActionQueue.add(ISAutoGateControllerAction:new(player, screwdriver, connectedController, "disconnect"))
 	ISCraftingUI.ReturnItemsToOriginalContainer(player, returnItems)
 end
@@ -168,7 +165,7 @@ function ISDPadWheels.onDisplayLeft(joypadData)
 		---@type InventoryItem
 		local item = playerItems:get(i)
 		if instanceof(item, "InventoryItem") and item:getType() == "GateController" then
-			if hotbar:isInHotbar(item) and GateUtils.checkDistanceToGate(player, GateUtils.getGateFromFrequency(GateUtils.getFrequency(item))) then
+			if hotbar:isInHotbar(item) and ISAutoGateUtils.checkDistanceToGate(player, ISAutoGateUtils.getGateFromFrequency(ISAutoGateUtils.getFrequency(item))) then
 				menu:addSlice(getText("ContextMenu_AutoGate_UseController"), item:getTex(), ISAutoGateUI.toggleFromHotbar, item, player)
 			end
 		end
@@ -177,18 +174,18 @@ end
 
 ---Toggle Gate from hotbar
 function ISAutoGateUI.toggleFromHotbar(controller, player)
-	local frequency = GateUtils.getFrequency(controller)
+	local frequency = ISAutoGateUtils.getFrequency(controller)
 	if frequency then
-		local gate = GateUtils.getGateFromFrequency(frequency)
+		local gate = ISAutoGateUtils.getGateFromFrequency(frequency)
 		if gate then
-			GateUtils.toggleAutomaticGate(gate, player)
+			ISAutoGateUtils.toggleAutomaticGate(gate, player)
 
 			--Renaming the controller in case it's needed
 			local controllerName = controller:getName()
 			local gateName = gate:getModData().RenameContainer_CustomName
-			if GateUtils.predicateGateName(gateName) and (string.gsub(controllerName, gateName, "") ~= " - No. " .. frequency[4]) then
-				GateUtils.debugMessage("Controller name does not match")
-				GateUtils.renameController(controller, gateName, frequency[4])
+			if ISAutoGateUtils.predicateGateName(gateName) and (string.gsub(controllerName, gateName, "") ~= " - No. " .. frequency[4]) then
+				ISAutoGateUtils.debugMessage("Controller name does not match")
+				ISAutoGateUtils.renameController(controller, gateName, frequency[4])
 			end
 		end
 	end
@@ -214,7 +211,7 @@ end
 ---@param player IsoPlayer Player renaming the gate
 function ISAutoGateUI.renameGateContainer(gate, player)
 	local gateName = gate:getModData()["RenameContainer_CustomName"]
-	local textBox = ISTextBox:new(0, 0, 280, 180, getText("IGUI_AutoGate_RenameGate"), GateUtils.predicateGateName(gateName) and tostring(gateName) or getText("ContextMenu_AutoGate_GateMenu"), gate, ISAutoGateUI.onRenameGateContainerClick, player:getPlayerNum(), player)
+	local textBox = ISTextBox:new(0, 0, 280, 180, getText("IGUI_AutoGate_RenameGate"), ISAutoGateUtils.predicateGateName(gateName) and tostring(gateName) or getText("ContextMenu_AutoGate_GateMenu"), gate, ISAutoGateUI.onRenameGateContainerClick, player:getPlayerNum(), player)
 	textBox:initialise()
 	textBox:addToUIManager()
 	textBox.entry:focus()
@@ -229,19 +226,19 @@ function ISAutoGateUI.onRenameGateContainerClick(gate, button, player)
 	if button.internal == "OK" then
 		local textBoxText = button.parent.entry:getText()
 		if textBoxText and textBoxText ~= "" and gate then
-			GateUtils.debugMessage("renamed gate to " .. textBoxText)
-			GateUtils.fullGateRename(gate, textBoxText)
+			ISAutoGateUtils.debugMessage("renamed gate to " .. textBoxText)
+			ISAutoGateUtils.fullGateRename(gate, textBoxText)
 			HaloTextHelper.addText(player, getText("IGUI_AutoGate_RenameGateDone"), HaloTextHelper.getColorGreen())
 
 			--Renaming the controllers for all players
-			local gateFrequency = GateUtils.getFrequency(gate)
+			local gateFrequency = ISAutoGateUtils.getFrequency(gate)
 			table.insert(gateFrequency, textBoxText)
 			if isClient() then
 				sendClientCommand("AutoGate", "renameGate", gateFrequency)
 			else
 				for i=0, 3 do
 					local playerJoypad = getSpecificPlayer(i)
-					GateUtils.renameController(gateFrequency, nil, nil, playerJoypad)
+					ISAutoGateUtils.renameController(gateFrequency, nil, nil, playerJoypad)
 				end
 			end
 		end
@@ -272,8 +269,8 @@ function ISAutoGateUI.doMenu(playerNum, contextMenu, objects)
 	--If a gate exists in the clicked square then
     if gate then
 		--To counterpart some bizarre problems with gate IsoGridSquare, all functions will work with the Corner object
-		gate = GateUtils.getGateFromSquare(GateUtils.getGateCorner(gate))
-        local gateFrequency = GateUtils.getFrequency(gate)
+		gate = ISAutoGateUtils.getGateFromSquare(ISAutoGateUtils.getGateCorner(gate))
+        local gateFrequency = ISAutoGateUtils.getFrequency(gate)
         --Checks if gate have a automatic motor installed
 		if gateFrequency then
             ------------------ Setting variables ------------------
@@ -285,36 +282,36 @@ function ISAutoGateUI.doMenu(playerNum, contextMenu, objects)
 			local mechanics = player:getPerkLevel(Perks.Mechanics)
 			local wrench = playerInventory:getCountTypeRecurse("Wrench")
 			local screwdriver = playerInventory:getCountTypeRecurse("Screwdriver")
-			local itemConnectedController = GateUtils.findControllerOnPlayer(player, gateFrequencyCode)
-			local emptyControllers = GateUtils.findControllerOnPlayer(player, nil)
-			local playerDistanceValid = GateUtils.checkDistanceToGate(player, gate)
-			local totalBatteryCharge = GateUtils.getBatteryFromGate(gate, true)
+			local itemConnectedController = ISAutoGateUtils.findControllerOnPlayer(player, gateFrequencyCode)
+			local emptyControllers = ISAutoGateUtils.findControllerOnPlayer(player, nil)
+			local playerDistanceValid = ISAutoGateUtils.checkDistanceToGate(player, gate)
+			local totalBatteryCharge = ISAutoGateUtils.getBatteryFromGate(gate, true)
 			------------------ Creating the gate SubMenu ------------------
 			local gateMenu = contextMenu:addOption(getText("ContextMenu_AutoGate_GateMenu"), objects, nil)
 			local gateSubMenu = ISContextMenu:getNew(contextMenu)
 			contextMenu:addSubMenu(gateMenu, gateSubMenu)
 			------------------ Use & Lock Options ------------------
 			if (itemConnectedController and playerDistanceValid) --[[or getDebug()]] then
-				local lockFromGateOption = gateSubMenu:addOption(GateUtils.getGateLockText(gateLock, "context"), gate, GateUtils.toggleGateLock, player)
+				local lockFromGateOption = gateSubMenu:addOption(ISAutoGateUtils.getGateLockText(gateLock, "context"), gate, ISAutoGateUtils.toggleGateLock, player)
 				if (gate:IsOpen()) then lockFromGateOption.notAvailable = true end
-				GateTooltip.lockGate(lockFromGateOption, gateLock, gateOpen)
-				local useFromGateMenu  = contextMenu:addOptionOnTop(getText("ContextMenu_AutoGate_UseController"), gate, GateUtils.toggleAutomaticGate, player)
+				ISAutoGateTooltip.lockGate(lockFromGateOption, gateLock, gateOpen)
+				local useFromGateMenu  = contextMenu:addOptionOnTop(getText("ContextMenu_AutoGate_UseController"), gate, ISAutoGateUtils.toggleAutomaticGate, player)
 				if (totalBatteryCharge.total <= 0) then useFromGateMenu.notAvailable = true end
-				GateTooltip.useFromGateOrControllerConnected(useFromGateMenu, totalBatteryCharge, true, playerDistanceValid)
+				ISAutoGateTooltip.useFromGateOrControllerConnected(useFromGateMenu, totalBatteryCharge, true, playerDistanceValid)
 			end
 			------------------ Connect, Reset & Rename Options ------------------
 			local renameOption = gateSubMenu:addOption (getText("ContextMenu_AutoGate_RenameGate"), gate, ISAutoGateUI.renameGateContainer, player)
 			if (electrical < AutoGateVars.LevelRequirementsControllerInteraction) or (mechanics < AutoGateVars.LevelRequirementsGateInteraction) or
 				(wrench < 1) then renameOption.notAvailable = true end
-			GateTooltip.renameGate(renameOption, electrical, mechanics, wrench, gateName)
+			ISAutoGateTooltip.renameGate(renameOption, electrical, mechanics, wrench, gateName)
 			local connectOption = gateSubMenu:addOption(getText("ContextMenu_AutoGate_ConnectController"), player, ISAutoGateUI.connectControllerToGate, emptyControllers[1], gate)
 			if (electrical < AutoGateVars.LevelRequirementsControllerInteraction) or (mechanics < AutoGateVars.LevelRequirementsGateInteraction) or
 				(#emptyControllers < 1) or (wrench < 1) or (screwdriver < 1) then connectOption.notAvailable = true end
-			GateTooltip.connectController(connectOption, #emptyControllers, electrical, mechanics, wrench, screwdriver, gateName)
+			ISAutoGateTooltip.connectController(connectOption, #emptyControllers, electrical, mechanics, wrench, screwdriver, gateName)
 			local resetOption = gateSubMenu:addOption (getText("ContextMenu_AutoGate_ResetGate"), gate, ISAutoGateUI.resetGate, player)
 			if (electrical < AutoGateVars.LevelRequirementsControllerInteraction) or (mechanics < AutoGateVars.LevelRequirementsGateInteraction) or
 				(wrench < 1) then resetOption.notAvailable = true end
-			GateTooltip.resetGate(resetOption, electrical, mechanics, wrench, gateName)
+			ISAutoGateTooltip.resetGate(resetOption, electrical, mechanics, wrench, gateName)
 			------------------ Hide Options ------------------
 			if gateLock then
 				gateSubMenu:removeOptionByName(getText("ContextMenu_AutoGate_ConnectController"))
@@ -348,11 +345,11 @@ function ISAutoGateUI.doInventoryMenu(playerNum, contextMenu, inventoryItems)
 		local itemInCheck = items[i]
 		if instanceof(itemInCheck, "InventoryItem") then
 			if itemInCheck:getType() == "GateController" then
-				local controllerFrequency = GateUtils.getFrequency(itemInCheck)
+				local controllerFrequency = ISAutoGateUtils.getFrequency(itemInCheck)
 				if controllerFrequency then
 					------------------ Setting variables ------------------
 					---@type IsoThumpable
-					local gate = GateUtils.getGateFromFrequency(controllerFrequency)
+					local gate = ISAutoGateUtils.getGateFromFrequency(controllerFrequency)
 					local gateExists = gate and true or false
 					local gateLock = gate and gate:isLockedByKey() or false
 					local gateOpen = gate and gate:IsOpen() or false
@@ -361,14 +358,14 @@ function ISAutoGateUI.doInventoryMenu(playerNum, contextMenu, inventoryItems)
 					local controller = itemInCheck
 					local electrical = player:getPerkLevel(Perks.Electricity)
 					local screwdriver = player:getInventory():getCountTypeRecurse("Screwdriver")
-					local emptyControllers = GateUtils.findControllerOnPlayer(player, nil)
-					local totalBatteryCharge = GateUtils.getBatteryFromGate(gate, true)
-					local playerDistanceValid = GateUtils.checkDistanceToGate(player, gate)
+					local emptyControllers = ISAutoGateUtils.findControllerOnPlayer(player, nil)
+					local totalBatteryCharge = ISAutoGateUtils.getBatteryFromGate(gate, true)
+					local playerDistanceValid = ISAutoGateUtils.checkDistanceToGate(player, gate)
 					------------------ Changing name of the controller ------------------
 					local controllerName = controller:getName()
-					if GateUtils.predicateGateName(gateName) and (string.gsub(controllerName, gateName, "") ~= " - No. " .. controllerFrequency[4]) then
-						GateUtils.debugMessage("Controller name does not match")
-						GateUtils.renameController(controller, gateName, controllerFrequency[4])
+					if ISAutoGateUtils.predicateGateName(gateName) and (string.gsub(controllerName, gateName, "") ~= " - No. " .. controllerFrequency[4]) then
+						ISAutoGateUtils.debugMessage("Controller name does not match")
+						ISAutoGateUtils.renameController(controller, gateName, controllerFrequency[4])
 					end
 					------------------ Creating the controller SubMenu ------------------
 					local controllerMenu = contextMenu:addOption(getText("ContextMenu_AutoGate_ControllerMenu"), inventoryItems, nil)
@@ -376,10 +373,10 @@ function ISAutoGateUI.doInventoryMenu(playerNum, contextMenu, inventoryItems)
 					local controllerSubMenu = ISContextMenu:getNew(contextMenu)
 					contextMenu:addSubMenu(controllerMenu, controllerSubMenu)
 					------------------ Use Controller Option ------------------
-					local useControllerOption = contextMenu:addOptionOnTop(getText("ContextMenu_AutoGate_UseController"), gate, GateUtils.toggleAutomaticGate, player)
+					local useControllerOption = contextMenu:addOptionOnTop(getText("ContextMenu_AutoGate_UseController"), gate, ISAutoGateUtils.toggleAutomaticGate, player)
 					if (not gateExists) or (totalBatteryCharge.total <= 0) or (not playerDistanceValid) then useControllerOption.notAvailable = true end
 					------------------ Lock Controller Option ------------------
-					local lockControllerOption = controllerSubMenu:addOption(GateUtils.getGateLockText(gateLock, "context"), gate, GateUtils.toggleGateLock, player)
+					local lockControllerOption = controllerSubMenu:addOption(ISAutoGateUtils.getGateLockText(gateLock, "context"), gate, ISAutoGateUtils.toggleGateLock, player)
 					if gateOpen then lockControllerOption.notAvailable = true end
 					------------------ Copy Controller Option ------------------
 					local copyControllerOption = controllerSubMenu:addOption(getText("ContextMenu_AutoGate_Copy"), player, ISAutoGateUI.copyControllerToAnother, controller,  emptyControllers[1])
@@ -389,13 +386,13 @@ function ISAutoGateUI.doInventoryMenu(playerNum, contextMenu, inventoryItems)
 					if (electrical < AutoGateVars.LevelRequirementsControllerInteraction) or (screwdriver < 1) then clearControllerOption.notAvailable = true end
 					------------------ Hide Options/Show Tooltips ------------------
 					if gateExists and playerDistanceValid then
-						GateTooltip.lockGate(lockControllerOption, gateLock, gateOpen)
+						ISAutoGateTooltip.lockGate(lockControllerOption, gateLock, gateOpen)
 					else
-						controllerSubMenu:removeOptionByName(GateUtils.getGateLockText(gateLock, "context"))
+						controllerSubMenu:removeOptionByName(ISAutoGateUtils.getGateLockText(gateLock, "context"))
 					end
-					GateTooltip.useFromGateOrControllerConnected(useControllerOption, totalBatteryCharge, gateExists, playerDistanceValid)
-					GateTooltip.copyController(copyControllerOption, #emptyControllers, electrical, screwdriver)
-					GateTooltip.clearController(clearControllerOption, electrical, screwdriver)
+					ISAutoGateTooltip.useFromGateOrControllerConnected(useControllerOption, totalBatteryCharge, gateExists, playerDistanceValid)
+					ISAutoGateTooltip.copyController(copyControllerOption, #emptyControllers, electrical, screwdriver)
+					ISAutoGateTooltip.clearController(clearControllerOption, electrical, screwdriver)
 				------------------ Ending loop after controller is found ------------------
 				break
 				end
@@ -409,13 +406,13 @@ local origDoContextualDblClick = ISInventoryPane.doContextualDblClick
 ---@param item InventoryItem Item that got clicked
 function ISInventoryPane:doContextualDblClick(item)
     local player = item:getContainer():getCharacter()
-	GateUtils.debugMessage(player:getFullName())
+	ISAutoGateUtils.debugMessage(player:getFullName())
 	if instanceof(item, "InventoryItem") then
 		if item:getType() == "GateController" then
-			local frequency = GateUtils.getFrequency(item)
-			local gate = GateUtils.getGateFromFrequency(frequency)
+			local frequency = ISAutoGateUtils.getFrequency(item)
+			local gate = ISAutoGateUtils.getGateFromFrequency(frequency)
 			if gate then
-				GateUtils.toggleAutomaticGate(gate, player)
+				ISAutoGateUtils.toggleAutomaticGate(gate, player)
 			end
 		end
 	end
@@ -429,13 +426,13 @@ local onServerCommand = function(module, command, args)
 	if isClient() then
 		if module == "AutoGate" then
 			if command == "install" then
-				GateUtils.installAutomaticGateMotor(args)
+				ISAutoGateUtils.installAutomaticGateMotor(args)
 			elseif command == "toggleGate" then
-				GateUtils.consumeBatteryMP(args)
+				ISAutoGateUtils.consumeBatteryMP(args)
 			elseif command == "renameGate" then
 				for i=0, 3 do
 					local player = getSpecificPlayer(i)
-					GateUtils.renameController(args, nil, nil, player)
+					ISAutoGateUtils.renameController(args, nil, nil, player)
 				end
 			end
 		end
@@ -446,3 +443,6 @@ end
 Events.OnServerCommand.Add(onServerCommand)
 Events.OnFillWorldObjectContextMenu.Add(ISAutoGateUI.doMenu)
 Events.OnFillInventoryObjectContextMenu.Add(ISAutoGateUI.doInventoryMenu)
+
+------------------ Returning file for 'require' ------------------
+return ISAutoGateUI

@@ -6,7 +6,8 @@
 
 --- All the Utilities methods used in other files are listed in this file
 --- @class ISAutoGateUtils
-	ISAutoGateUtils = {}
+--- @return ISAutoGateUtils
+	local ISAutoGateUtils = {}
 ----------------------------------------------------------------------------------------------
 
 --Local variables
@@ -794,3 +795,7 @@ end
 
 ------------------ Add functions to events ------------------
 Events.OnGameBoot.Add(ISAutoGateUtils.setSkillSpecificAutoGateRecipe)
+
+
+------------------ Returning file for 'require' ------------------
+return ISAutoGateUtils
