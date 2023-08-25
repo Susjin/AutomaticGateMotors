@@ -3,8 +3,9 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
 
----	All the methods related to the InstallAutomaticGate Action are listed in this file
+---	All the methods related to all Controller Interactions are listed in this file
 ---	@class ISAutoGateControllerAction : ISBaseTimedAction
 --- @field character IsoPlayer The player doing the action
 --- @field screwdriver InventoryItem Tool used in the action
@@ -12,12 +13,11 @@ require "TimedActions/ISBaseTimedAction"
 --- @field actionToBeExecuted string What the action will do. Can be "disconnect", "copyStart"/"copyFinish" or "connect"
 --- @field secondController InventoryItem Optional, only needed if "actionToBeExecuted" is "copyStart"/"copyFinish"
 --- @field gate IsoThumpable Optional, gate to connect to, only needed if "actionToBeExecuted" is "connect"
-	ISAutoGateControllerAction = ISBaseTimedAction:derive("ISAutoGateControllerAction")
+---	@return ISAutoGateControllerAction
+	local ISAutoGateControllerAction = ISBaseTimedAction:derive("ISAutoGateControllerAction")
 ----------------------------------------------------------------------------------------------
 --Setting up locals
----@type ISAutoGateUtils
----@see ISAutoGateUtils
-local GateUtils = ISAutoGateUtils
+local ISAutoGateUtils = require "ISAutoGateUtils"
 
 local textsTypes = {
 	disconnect = getText("IGUI_AutoGate_ClearingController"),
@@ -74,15 +74,15 @@ function ISAutoGateControllerAction:perform()
 	self.screwdriver:setJobDelta(0.0)
 	self.controller:setJobDelta(0.0)
 	self:stopSound()
-	GateUtils.debugMessage(self.actionToBeExecuted)
+	ISAutoGateUtils.debugMessage(self.actionToBeExecuted)
 	if self.actionToBeExecuted == "disconnect" then
-		GateUtils.clearController(self.controller)
+		ISAutoGateUtils.clearController(self.controller)
 		HaloTextHelper.addText(self.character, getText("IGUI_AutoGate_ClearControllerDone"), HaloTextHelper.getColorRed())
 	elseif self.actionToBeExecuted == "copyFinish" then
-		GateUtils.makeControllerCopy(self.secondController, self.controller)
+		ISAutoGateUtils.makeControllerCopy(self.secondController, self.controller)
 		HaloTextHelper.addText(self.character, getText("IGUI_AutoGate_CopyingDone"), HaloTextHelper.getColorGreen())
 	elseif self.actionToBeExecuted == "connect" then
-		GateUtils.connectGateController(self.controller, self.gate)
+		ISAutoGateUtils.connectGateController(self.controller, self.gate)
 		HaloTextHelper.addText(self.character, getText("IGUI_AutoGate_ConnectControllerDone"), HaloTextHelper.getColorGreen())
 	end
 	--Finish TimedAction
@@ -114,7 +114,5 @@ function ISAutoGateControllerAction:new(character, screwdriver, controller, acti
 	return o
 end
 
-
-
-
-
+------------------ Returning file for 'require' ------------------
+return ISAutoGateControllerAction

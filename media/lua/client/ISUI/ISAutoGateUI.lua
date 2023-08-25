@@ -16,6 +16,9 @@ local AutoGateVars = SandboxVars.AutoGate
 ---Local tables to store all functions
 local ISAutoGateUtils = require "ISAutoGateUtils"
 local ISAutoGateTooltip = require "ISUI/ISAutoGateTooltip"
+local ISAutoGateInstallAction = require "TimedActions/ISAutoGateInstallAction"
+local ISAutoGateInteractAction = require "TimedActions/ISAutoGateInteractAction"
+local ISAutoGateControllerAction = require "TimedActions/ISAutoGateControllerAction"
 local BlowtorchUtils = ISBlacksmithMenu
 
 

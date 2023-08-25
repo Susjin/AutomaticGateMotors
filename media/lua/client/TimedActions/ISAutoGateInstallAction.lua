@@ -3,19 +3,19 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
 
----	All the methods related to the InstallAutomaticGate Action are listed in this file
+---	All the methods related to the Automatic Gate Install Action are listed in this file
 ---	@class ISAutoGateInstallAction : ISBaseTimedAction
 --- @field character IsoPlayer The player doing the action
 --- @field gate IsoThumpable The target of the action
 --- @field blowtorch DrainableComboItem A Blowtorch with uses left
 --- @field weldingrods DrainableComboItem A WeldingRods with uses left
-	ISAutoGateInstallAction = ISBaseTimedAction:derive("ISAutoGateInstallAction")
+---	@return ISAutoGateInstallAction
+	local ISAutoGateInstallAction = ISBaseTimedAction:derive("ISAutoGateInstallAction")
 ----------------------------------------------------------------------------------------------
 --Setting up locals
----@type ISAutoGateUtils
----@see ISAutoGateUtils
-local GateUtils = ISAutoGateUtils
+local ISAutoGateUtils = require "ISAutoGateUtils"
 
 ---Predicate WeldingMask
 ---@param player IsoPlayer
@@ -92,7 +92,7 @@ function ISAutoGateInstallAction:perform()
 	if isClient() then
         sendClientCommand("AutoGate", "install", {x = self.gate:getX(), y = self.gate:getY(), z = self.gate:getZ()})
     else
-		GateUtils.installAutomaticGateMotor({x = self.gate:getX(), y = self.gate:getY(), z = self.gate:getZ()})
+		ISAutoGateUtils.installAutomaticGateMotor({ x = self.gate:getX(), y = self.gate:getY(), z = self.gate:getZ()})
     end
 	
 	--Ending Action
@@ -120,7 +120,5 @@ function ISAutoGateInstallAction:new(character, gate, blowtorch, weldingrods)
 	return o
 end
 
-
-
-
-
+------------------ Returning file for 'require' ------------------
+return ISAutoGateInstallAction

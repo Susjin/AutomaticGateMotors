@@ -3,20 +3,20 @@ require "TimedActions/ISBaseTimedAction"
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repo: https://github.com/Susjin/AutomaticGateMotors
 
----	All the methods related to the Connect Action are listed in this file
+---	All the methods related to all Gate Interactions are listed in this file
 ---	@class ISAutoGateInteractAction : ISBaseTimedAction
 --- @field character IsoPlayer The player doing the action
 --- @field gate IsoThumpable The target of the action
 --- @field wrench InventoryItem Wrench used in the action
 --- @field actionToBeExecuted string What the action will do. Can be "reset" or "connect"
-	ISAutoGateInteractAction = ISBaseTimedAction:derive("ISAutoGateConnectAction")
+---	@return ISAutoGateInteractAction
+	local ISAutoGateInteractAction = ISBaseTimedAction:derive("ISAutoGateInteractAction")
 ----------------------------------------------------------------------------------------------
 
 --Setting up locals
----@type ISAutoGateUtils
----@see ISAutoGateUtils
-local GateUtils = ISAutoGateUtils
+local ISAutoGateUtils = require "ISAutoGateUtils"
 
 local textsTypes = {
 	reset = getText("IGUI_AutoGate_GateResetting"),
@@ -69,9 +69,9 @@ function ISAutoGateInteractAction:perform()
 	self.wrench:setJobDelta(0.0)
 	self:stopSound()
 
-	GateUtils.debugMessage(self.actionToBeExecuted)
+	ISAutoGateUtils.debugMessage(self.actionToBeExecuted)
 	if self.actionToBeExecuted == "reset" then
-		GateUtils.resetGate(self.gate, true)
+		ISAutoGateUtils.resetGate(self.gate, true)
 		HaloTextHelper.addText(self.character, getText("IGUI_AutoGate_GateReset"), HaloTextHelper.getColorGreen())
 	end
 	--Finish TimedAction
@@ -98,7 +98,5 @@ function ISAutoGateInteractAction:new(character, gate, wrench, actionToBeExecute
 	return o
 end
 
-
-
-
-
+------------------ Returning file for 'require' ------------------
+return ISAutoGateInteractAction
