@@ -1,0 +1,5 @@
+Recipes_IT = {
+
+	Recipe_Create_Controller = "Crea il Telecomando del Cancello",
+	Recipe_Create_Gate_Components = "Crea il Motore del Cancello",
+}

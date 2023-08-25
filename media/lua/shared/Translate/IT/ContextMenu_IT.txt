@@ -1,0 +1,13 @@
+ContextMenu_IT = {
+
+	ContextMenu_AutoGate_InstallComponents = "Installa il Motore del Cancello",
+	ContextMenu_AutoGate_ConnectController = "Connetti il Telecomando al Cancello",
+	ContextMenu_AutoGate_UseController = "Usa il Telecomando",
+	ContextMenu_AutoGate_Copy = "Copia la Frequenza del Telecomando",
+	ContextMenu_AutoGate_ClearController = "Disconnetti il Telecomando",
+	ContextMenu_AutoGate_LockGate = "Blocca il Cancello",
+	ContextMenu_AutoGate_UnlockGate = "Sblocca il Cancello",
+	ContextMenu_AutoGate_ResetGate = "Resetta la Frequenza",
+	ContextMenu_AutoGate_GateMenu = "Cancello Automatico",
+	ContextMenu_AutoGate_ControllerMenu = "Telecomando del Cancello Automatico",
+}

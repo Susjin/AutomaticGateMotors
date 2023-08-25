@@ -1,0 +1,46 @@
+module AutoGate
+{
+	imports {
+		Base
+	}
+
+	item GateController
+	{
+		DisplayCategory = Electronics,
+		Weight = 0.2,
+		Type = Normal,
+		DisplayName = Automatic Gate Controller,
+		Icon = RemoteCrafted,
+		MetalValue = 15,
+		Tooltip = Tooltip_AutoGate_GateController,
+		WorldStaticModel = RemoteController,
+		StaticModel = WalkieTalkieMakeshift,
+		AttachmentType = Walkie
+	}
+
+	item GateComponents
+	{
+		DisplayCategory = VehicleMaintenance,
+		Weight = 7.5,
+		Type = Normal,
+		DisplayName = Automatic Gate Motor,
+		Icon = EngineParts,
+		MetalValue = 100,
+		Tooltip = Tooltip_AutoGate_GateComponents,
+		WorldStaticModel = EngineParts
+	}
+
+	item AutoGateMag
+	{
+		DisplayCategory = SkillBook,
+		Weight = 0.1,
+		Type = Literature,
+		DisplayName = All about Automatic Gates,
+		Icon = AutoGateMag,
+		TeachedRecipes = Create Controller;Create Gate Components;CanInstallGate,
+		ReplaceOnUse = AutoGateMag,
+		Tooltip = Tooltip_AutoGate_AutoGateMagazine,
+		StaticModel = Magazine,
+		WorldStaticModel = MagazineMec3Ground
+	}
+}

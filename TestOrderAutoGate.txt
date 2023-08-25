@@ -1,0 +1,50 @@
+SEQUENCIA DO MOD:
+
+1º - Encontrar a revista de portões
+2º - Craftar os componentos do mod
+	motor
+	controle
+3º - Instalar motor em portão
+4º - Conectar controle no portão
+
+SEMPRE VERIFICAR TEXTOS-TOOLTIPS
+
+Sequência de testes:
+DblClick: DONE
+	Testar controle
+	Testar carga/multiplas - NÃO ESTÁ CONSUMINDO A CARGA DA BATERIA PARA TODOS -- Sync done? DONE
+	Testar range
+	Testar qual player está interagindo
+
+Use: DONE 
+	Testar controle
+	Testar carga/multiplas - NÃO ESTÁ CONSUMINDO A CARGA DA BATERIA PARA TODOS -- Sync done? DONE
+	Testar range
+
+Lock: NÃO FECHA NO SERVIDOR - TRANSFERIR AÇÃO PARA O SERVIDOR -- Sync done? DONE
+	Pelo controle
+	Pelo portão
+	Testar range
+	Tentar todas as possibilidades de travar/destravar
+	Checar container das baterias -TAMBÉM TRANSFERIR AÇÃO PARA O SERVIDOR -- Sync done? DONE
+	Tentar invalidar a ação de todas as formas possíveis
+
+Connect: DONE
+	Portão
+	Tentar invalidar a ação de todas as formas possíveis
+	Tentar com portão trancado
+	
+Reset: DONE
+	Portão
+	Tentar invalidar a ação de todas as formas possíveis
+	Tentar com portão trancado
+
+Disconnect: DONE
+	Controle
+	Tentar invalidar a ação de todas as formas possíveis
+	
+Copy: DONE
+	Controle
+	Tentar invalidar a ação de todas as formas possíveis
+	Tentar copiar controle com portão destruído
+	

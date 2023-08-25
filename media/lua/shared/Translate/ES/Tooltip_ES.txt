@@ -1,0 +1,37 @@
+Tooltip_ES = {
+ 
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Puerta automática con motor",
+	Tooltip_AutoGate_InstallComponents = "Instalando motor de puerta automática",
+	Tooltip_AutoGate_InstallComponentsDescription = "Las puertas que tienen un motor instalado pueden ser abiertas/cerradas remotamente usando un mando para puertas automáticas conectado.",
+	Tooltip_AutoGate_Connecting = "Contectando mando para puertas automáticas",
+	Tooltip_AutoGate_ConnectingDescription = "Conectar un mando a esta puerta permitirá que se abra y se cierre de forma remota.",
+	Tooltip_AutoGate_Copy = "Copiando mando para puertas automáticas",
+	Tooltip_AutoGate_CopyDescription = "Copia la frecuencia del mando seleccionado a un mando desconectado.",
+	Tooltip_AutoGate_Open = "Usar mando para puertas automáticas",
+	Tooltip_AutoGate_OpenDescription = "Activa la puerta automática que esté conectada al mando actualmente.",
+	Tooltip_AutoGate_LockGate = "Bloquear puerta automática",
+	Tooltip_AutoGate_LockGateDescription = "Bloquea la puerta automática que este: <LINE> Seleccionada, o: <LINE> Conectada al mando seleccionado.",
+	Tooltip_AutoGate_UnlockGate = "Desbloquear peurta automática",
+	Tooltip_AutoGate_UnlockGateDescription = "Desbloquea la puerta automática que este: <LINE> Seleccionada, o: <LINE> Conectada al mando seleccionado.",
+	Tooltip_AutoGate_Reset = "Reiniciar la frecuencia de la puerta automática",
+	Tooltip_AutoGate_ResetDescription = "Reinicia el código de frecuencia de la puerta automática seleccionada.",
+	Tooltip_AutoGate_ClearController = "Desconectar mando para puertas automáticas",
+	Tooltip_AutoGate_ClearControllerDescription = "Desconecta el mando seleccionado de una puerta automática",
+	Tooltip_AutoGate_UndoneDescription = "¡ESTA ACCIÓN NO SE PUEDE DESHACER! ¡ <LINE> ASEGÚRATE DE QUE LA PUERTA ESTÁ DESBLOQUEADA!",
+	Tooltip_AutoGate_UndoneFootNote = "Solo puedes desbloquear el mando si la puerta está desbloqueada."
+	Tooltip_AutoGate_CantInstallFootNote = "¡No se puede instalar el motor si la puerta está abierta!"
+	Tooltip_AutoGate_CantLock = "¡No se puede bloquear la puerta si está abierta!"
+	Tooltip_AutoGate_BatteryCharge = "Carga de la batería de la puerta",
+	Tooltip_AutoGate_NoBatteries = "Cualquier batería de coche en la puerta",
+	Tooltip_AutoGate_GateNotFound = "¡La puerta automática de este <LINE> mando está fuera del rango de emisión!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "La puerta ha podidos ser destruida o su frecuencia reiniciada.",
+	Tooltip_AutoGate_GateComponents = "Instalar este motor en cualquier puerta de madera para abrirla y cerrarla de forma remota.",
+	Tooltip_AutoGate_AutoGateMagazine = "Manual de instrucciones con todos los esquemas y procedimientos para crear puertas automáticas.",
+ 
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Renombrar puerta automática",
+	Tooltip_AutoGate_RenameDescription = "Cambiar el nombre de la puerta automática actualmente seleccionada a otro nombre. Los mandos conectados tendrán el mismo nombre.",
+	Tooltip_AutoGate_RenameFootNote = "Los mandos ya conectados se renombrarán tras usarlos.",
+	Tooltip_AutoGate_GateController = "Este mando puede usarse para abrir y cerrar las puertas conectadas que tengan un motor de puerta automática instalado. (Se puede acoplar al cinturón)",
+}

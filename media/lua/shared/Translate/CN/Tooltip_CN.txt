@@ -1,0 +1,37 @@
+Tooltip_CN = {
+ 
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "由自动门闸机控制的门",
+	Tooltip_AutoGate_InstallComponents = "正在安装自动门闸机...",
+	Tooltip_AutoGate_InstallComponentsDescription = "安装了自动门闸机的门可以用遥控器来远程遥控开关。",
+	Tooltip_AutoGate_Connecting = "正在配对自动门闸机与遥控器...",
+	Tooltip_AutoGate_ConnectingDescription = "将一个自动门闸机遥控器配对到一个门后，将可以通过遥控器控制这个门的开关。",
+	Tooltip_AutoGate_Copy = "正在复制自动门闸机遥控器频道信息...",
+	Tooltip_AutoGate_CopyDescription = "将已配对的遥控器频道信息复制给另一个未配对的遥控器。",
+	Tooltip_AutoGate_Open = "使用遥控器控制配对好的自动门",
+	Tooltip_AutoGate_OpenDescription = "开/关当前连接的自动门。",
+	Tooltip_AutoGate_LockGate = "锁定自动门",
+	Tooltip_AutoGate_LockGateDescription = "锁定满足以下条件的门:<LINE>当前选中的, 或者:<LINE>已由这个遥控器配对的。",
+	Tooltip_AutoGate_UnlockGate = "解锁自动门",
+	Tooltip_AutoGate_UnlockGateDescription = "解锁满足以下条件的门:<LINE>当前选中的, 或者:<LINE>已由这个遥控器配对的。",
+	Tooltip_AutoGate_Reset = "清除自动门遥控频道信息",
+	Tooltip_AutoGate_ResetDescription = "清除当前选中的自动门遥控频道信息（从门端解除配对）。",
+	Tooltip_AutoGate_ClearController = "解除自动门遥控器配对",
+	Tooltip_AutoGate_ClearControllerDescription = "解除当前选中的自动门遥控器配对关系（从遥控器端解除配对）。",
+	Tooltip_AutoGate_UndoneDescription = "警告：此操作不可逆！<LINE> 请先确认此遥控器配对的自动门当前没有上锁！",
+	Tooltip_AutoGate_UndoneFootNote = "你只能在自动门没有上锁的情况下进行配对。"
+	Tooltip_AutoGate_CantInstallFootNote = "无法在门打开的情况下安装自动门闸机！"
+	Tooltip_AutoGate_CantLock = "无法在门打开的情况下上锁！"
+	Tooltip_AutoGate_BatteryCharge = "请及时为自动门闸机的汽车电池充电！",
+	Tooltip_AutoGate_NoBatteries = "这个自动门没有安装汽车电池！",
+	Tooltip_AutoGate_GateNotFound = "<LINE>此遥控器配对的自动门超出了遥控通讯范围，无法遥控！",
+	Tooltip_AutoGate_GateNotFoundFootNote = "可能自动门已被摧毁，或者自动门上的配对频道信息被清除了",
+	Tooltip_AutoGate_GateComponents = "安装此门闸机到任意门上，此后就可以通过遥控器遥控开关了。",
+	Tooltip_AutoGate_AutoGateMagazine = "一本包含了制作自动门闸机所需的所有图纸和程序的说明书。",
+	
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "重命名自动门",
+	Tooltip_AutoGate_RenameDescription = "重命名当前选中的自动门，配对到此门的遥控器也会自动重命名为一样的名字。",
+	Tooltip_AutoGate_RenameFootNote = "已配对到此门的遥控器会在下一次遥控后自动刷新名称，使其与自动门同名。",
+	Tooltip_AutoGate_GateController = "此遥控器可以在配对到一个已安装自动门闸机的门后，遥控开关这扇门。（遥控器可以挂到皮带上）",
+}

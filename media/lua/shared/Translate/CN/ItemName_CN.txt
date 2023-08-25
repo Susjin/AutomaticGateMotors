@@ -1,0 +1,6 @@
+ItemName_CN = {
+ 
+	ItemName_AutoGate.GateController = "自动门闸机遥控器",
+	ItemName_AutoGate.GateComponents = "自动门闸机",
+	ItemName_AutoGate.AutoGateMag = "自动门闸机制造安装说明书",
+}

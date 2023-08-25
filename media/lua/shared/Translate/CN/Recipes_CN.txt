@@ -1,0 +1,5 @@
+Recipes_CN = {
+ 
+	Recipe_Create_Controller = "制造自动门闸机遥控器",
+	Recipe_Create_Gate_Components = "制造自动门闸机",
+}

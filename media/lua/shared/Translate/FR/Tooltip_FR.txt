@@ -1,0 +1,37 @@
+Tooltip_FR = {
+ 
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Portail Automatique avec Moteur",
+	Tooltip_AutoGate_InstallComponents = "Installation de Moteur de Portail Automatique",
+	Tooltip_AutoGate_InstallComponentsDescription = "Les Portails qui ont un Moteur de Portail Automatique installé peuvent être ouvert/fermé à distance en utilisant une Télécommande de Portail connectée.",
+	Tooltip_AutoGate_Connecting = "Connection de la Télécommande de Portail Automatique",
+	Tooltip_AutoGate_ConnectingDescription = "Connecter une Télécommande de Portail Automatique à un Portail vous permet d'ouvrir/fermer le Portail à distance.",
+	Tooltip_AutoGate_Copy = "Copie de la Télécommande du Portail Automatique",
+	Tooltip_AutoGate_CopyDescription = "Copie la fréquence de la Télécommande de Portail Automatique sélectionnée sur une Télécommande déconnectée.",
+	Tooltip_AutoGate_Open = "Utilisation de la Télécommande du Portail Automatique",
+	Tooltip_AutoGate_OpenDescription = "Bascule entre les Portails Automatiques actuellement connectés.",
+	Tooltip_AutoGate_LockGate = "Verrouillage du Portail Automatique",
+	Tooltip_AutoGate_LockGateDescription = "Verrouille le Portail actuellement sélectionné qui est: <LINE> Sélectionné, ou: <LINE> Connecté à la Télécommande sélectionnée.",
+	Tooltip_AutoGate_UnlockGate = "Déverrouillage du Portail Automatique",
+	Tooltip_AutoGate_UnlockGateDescription = "Déverrouille le Portail actuellement sélectionné qui est: <LINE> Sélectionné, ou: <LINE> Connecté à la Télécommande sélectionnée.",
+	Tooltip_AutoGate_Reset = "Réinitialisation de la Fréquence du Portail Automatique",
+	Tooltip_AutoGate_ResetDescription = "Réinitialise le code de Fréquence du Portail Automatique actuellement sélectionné.",
+	Tooltip_AutoGate_ClearController = "Déconnexion de la Télécommande de Portail Automatique",
+	Tooltip_AutoGate_ClearControllerDescription = "Déconnexion de la Télécommande actuellement sélectionnée d'un Portail Automatique.",
+	Tooltip_AutoGate_UndoneDescription = "CETTE ACTION NE PEUT PAS ETRE ANNULEE! <LINE> SOYEZ SUR QUE LE PORTAIL EST DEVERROUILLE!",
+	Tooltip_AutoGate_UndoneFootNote = "Vous pouvez seulement connecter une Télécommande si le Portail est déverrouillé."
+	Tooltip_AutoGate_CantInstallFootNote = "Impossible d'installer un Moteur si le Portail est ouvert!"
+	Tooltip_AutoGate_CantLock = "Impossible de verrouiller le Portail quand il est ouvert!"
+	Tooltip_AutoGate_BatteryCharge = "Charge de la batterie du Portail",
+	Tooltip_AutoGate_NoBatteries = "Aucune batterie de voiture sur le Portail",
+	Tooltip_AutoGate_GateNotFound = "Le Portail Automatique connecté à cette <LINE> télécommande est en dehors de sa distance de transmission!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "A pu être détruit ou avoir eu sa fréquence réinitialisée",
+	Tooltip_AutoGate_GateComponents = "Installer ce moteur sur n'importe quel Portail en bois pour l'ouvrir ou le fermer avec une Télécommande.",
+	Tooltip_AutoGate_AutoGateMagazine = "Le Manuel d'Instructions comprend tous les schémas et procédures pour créer des Portails Automatiques.",
+	
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Renommage du Portail Automatique",
+	Tooltip_AutoGate_RenameDescription = "Changer le nom du Portail Automatique actuellement sélectionné au nom que l'utilisateur souhaite. Les télécommandes qui y sont connectées auront le même nom.",
+	Tooltip_AutoGate_RenameFootNote = "Les télécommandes qui y sont déjà connectées seront renommées après utilisation.",
+	Tooltip_AutoGate_GateController = "Cette télécommande peut être utilisée pour ouvrir et fermer les portails connectés avec un Moteur de Portail Automatique installé. (Peut être placée sur une ceinture)",
+}

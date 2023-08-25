@@ -1,0 +1,7 @@
+ItemName_RU = {
+
+	/* Version 1.0 */
+	ItemName_AutoGate.GateController = "Контроллер автоматических ворот",
+	ItemName_AutoGate.GateComponents = "Автоматический двигатель ворот",
+	ItemName_AutoGate.AutoGateMag = "Все об автоматических воротах",
+}

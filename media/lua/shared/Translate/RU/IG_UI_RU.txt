@@ -1,0 +1,18 @@
+IGUI_RU = {
+
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "Автоматические ворота успешно установлены!",
+	IGUI_AutoGate_Installing = "Установка двигателя автоматических ворот...",
+	IGUI_AutoGate_ConnectControllerDone = "Контроллер автоматических ворот подключен!",
+	IGUI_AutoGate_ClearingController   = "Отключение контроллера...",
+	IGUI_AutoGate_ClearControllerDone   = "Контроллер автоматических ворот отключен!",
+	IGUI_AutoGate_CopyingFrom = "Получение частоты...",
+	IGUI_AutoGate_CopyingTo = "Установка частоты...",
+	IGUI_AutoGate_CopyingDone = "Контроллер автоматических ворот успешно скопирован!",
+	IGUI_AutoGate_GateResetting = "Сброс частоты...",
+	IGUI_AutoGate_GateReset = "Чистота автоматических ворот сброшена!",
+	
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Переименовать автоматические ворота",
+	IGUI_AutoGate_RenameGateDone = "Автоматические ворота успешно переименованы!",
+}

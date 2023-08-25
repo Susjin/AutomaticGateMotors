@@ -1,0 +1,17 @@
+ContextMenu_CN = {
+ 
+ 	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "安装自动门闸机",
+	ContextMenu_AutoGate_ConnectController = "配对自动门闸遥控器",
+	ContextMenu_AutoGate_UseController = "使用遥控器",
+	ContextMenu_AutoGate_Copy = "复制自动门闸配对频道",
+	ContextMenu_AutoGate_ClearController = "取消配对自动门闸机遥控器",
+	ContextMenu_AutoGate_LockGate = "自动门闸机-锁门",
+	ContextMenu_AutoGate_UnlockGate = "自动门闸机-解锁",
+	ContextMenu_AutoGate_ResetGate = "清除自动门闸机配对频道信息",
+	ContextMenu_AutoGate_GateMenu = "自动门",
+	ContextMenu_AutoGate_ControllerMenu = "自动门闸机遥控器",
+	
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "重命名自动门",
+}

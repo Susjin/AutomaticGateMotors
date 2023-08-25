@@ -1,0 +1,25 @@
+Sandbox_IT = {
+
+	Sandbox_AutoGate = "Motore del Cancello",
+
+	Sandbox_AutoGate_AutoLockGate = "Chiudi automaticamente il Cancello",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "chiudendo il cancello con il telecomando, rimarrà chiuso anche dall'interno",
+	Sandbox_AutoGate_ControllerRange = "Controller mange",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Distanza massima del telecomando.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Utilizzo della Batteria",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Utilizzi totali della batteria.",
+
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Requisiti di Installazione",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Lavorazione dei Metalli Richiesta per l'Installazione.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Requisiti per la connessione del Telecomando",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Livello di Elettricista Richiesto per la Connessione.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Requisiti di interazione al Cancello",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Livello di Meccanica Richiesto per la Creazione del Cancello.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Requisiti per creare un Telecomando",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Livello di Elettricista Richiesto per la creazione del Telecomando (Riavvio necessario)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Requisiti per la Creazione del Motore",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Livello di Elettricista Richiesto per la creazione del Motore. (Riavvio necessario)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Requisiti per la Creazione del Motore",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Livello di Meccanica Richiesto per la creazione del Motore. (Riavvio necessario)",
+
+}

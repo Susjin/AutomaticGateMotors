@@ -1,0 +1,17 @@
+ContextMenu_ES = {
+ 
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Instalar motor para puertas automáticas",
+	ContextMenu_AutoGate_ConnectController = "Conectar motor para puertas automáticas",
+	ContextMenu_AutoGate_UseController = "Usar mando",
+	ContextMenu_AutoGate_Copy = "Copiar frecuencia de puerta automática",
+	ContextMenu_AutoGate_ClearController = "Desconectar mando de puerta automática",
+	ContextMenu_AutoGate_LockGate = "Bloquear puerta automática",
+	ContextMenu_AutoGate_UnlockGate = "Desbloquear puerta automática",
+	ContextMenu_AutoGate_ResetGate = "Reiniciar frecuencia de puerta automática",
+	ContextMenu_AutoGate_GateMenu = "Puerta automática",
+	ContextMenu_AutoGate_ControllerMenu = "Mando de puerta automática",
+ 
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Renombrar puerta automática",
+}

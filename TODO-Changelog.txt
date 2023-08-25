@@ -1,0 +1,220 @@
+Changelog:
+
+This mod is a complete rewrite.
+Literally, EVERY line of code was written from scratch.
+In other words, this is a completely new mod.
+But, if you still want to know the differences from the old mod, here they are:
+
+    Installation TimedAction Overhaul:
+    The installation TimedAction wasn't that great. It lacks sound, correctly equipping, setting delta times and names for the items(progress bar shown on the item when you look it in the inventory),
+    and didn't even consume the Blowtorch at all (which now any action with a Blowtorch consumes it).
+    These are the changes that where made:
+        Use and deplete Blowtorch on installation
+        Made it also use Welding Rods on installation
+        Always check for the Blowtorch and Welding Rods with most uses (and avoid unequipping)
+            Checks on the whole player inventory (including backpacks)
+            To avoid unequipping and reequipping, check if currently equipped items have enough uses to install gate motor
+        Now only need MetalWorking knowledge to do.
+        Standardize to be similar to others TimedActions (SoundEffects, Delta on the items used in inventory, correctly equip animation, etc.)
+        
+    User Feedback Overhaul:
+    Whenever the player did a specific action (e.g. installed a gate motor, paired or copied a controller), the way of returning to the user that the action was completed and successful, the
+    "say" command was called. I changed it to use the same text that appears when the player level up a skill (with colors!):
+        Now uses HaloTextHelper(same text that appears when you level up) to show that information.
+
+    Tooltips Overhaul:
+    The tooltips where, quite meh. They lack the current colors changes, where formatted in a very different way then others in-game, and could show a lot of more information.
+    These are the changes that where made:
+        Standardize tooltips style and format to be the same as others in the game (e.g. the BuildingMenu).
+        Shows information about how many items are needed and how many items the player has for every action.
+        Shows how many charges are left on the battery inside the gate container when using a connected controller.
+            If multiple batteries are present, shows the total charge of all of them.
+            If none of them are present, shows a message saying that it needs a car battery inside.
+            Also, if a gate is destroyed or reset, the tooltip shows a feedback to the player.
+        Shows all required items/tools needed and currently with the player(including inside backpacks).
+        Shows BIG advice that the action of resetting a gate or disconnecting a controller can't be undone.
+        Uses colors correctly and get user desired colors from accessibility options: Good/Bad Highlighted Color
+            Colors are automatically updated whenever the player changes them.
+    (Some things said above are new features. I'll be talking about them in the end)
+
+    ContextMenu Overhaul:
+    The ContextMenu was actually very good, there were just some things that in my view could be better, like options positioning, options not showing everytime, 
+    names not exactly showing the purpose of the option and so on.
+    These are the changes that where made:
+        Renamed options to be more obvious of their functionality.
+        Placed all gate interaction options inside a submenu (except for use controller).
+        Reposition all the options to a more suitable place:
+            "Use Controller" always shows on top.
+            The interactions menu for each object(gate or controller) always appears on the bottom.
+        Hide/Lock options when certain conditions are not met:
+            Main ContextMenu:
+                "Install Gate"(on gate) option only appears on gate if the player have a BlowTorch and a WeldingMask on his inventory. (Same as MetalWelding Menu)
+                "Use Controller"(on gate/controller) option only appears if the player has a controller that is currently connected to that gate, and it is within the controller's max range.
+            Gate Submenu:
+                "Lock/Unlock" option only appears if the player has a controller that is currently connected to that gate.
+                "Connect Controller" option only appears if the gate is unlocked.
+                "Reset Frequency" option only appears if the gate is unlocked.
+            Controller Submenu:
+                "Lock/Unlock"(on controller) option only appears if the player has a controller that is currently connected and the gate exists.
+                "Disconnect"(on controller) option only appears if the player has a controller that was previously connected. (gate may not exist/may be reset)
+                "Copy Frequency"(on controller) option only appears if the player has a controller that is currently connected.
+            If a tooltip is not hidden, but locked, the tooltip will return the feedback to the player of what is wrong.
+    (Some things said above are new features. I'll be talking about them in the end)
+
+    Items/Recipes Scripts Overhaul:
+    There was just a few things that were quite off on the items and recipes side, e.g. some balancing issues with weight, recipe cost and so on.
+    These are the changes that where made:
+        On the recipes side:
+            Balanced item costs for the controller and gate motor to standardize and make more sense.
+            Added animations and sounds when crafting.
+            Added free recipes for the engineer
+            Added skill level requirements for recipes. (changeable via the SandboxSettings)
+        On the items side:
+            Adjusted weights to match the required items to craft.
+            Added category tags to look "similar" to vanilla items (maybe reworked soon).
+            Renamed items to the new standards of the mod.
+            Added tooltips to the items to explain their use.
+
+    Translations Overhaul:
+    There was no way of translating the mod, because the Strings for labels and descriptions where hard-coded in english, so you couldn't even make the translations files.
+    These are the changes that where made:
+        Added the option to make translations for every string. (Tooltips, Items, Recipes, ContextMenu, etc.)
+        Used some official specific game translation Strings to ease the creation of translations.
+        Corrected some strings for information to be more precise, understandable and follow the new standards of the mod.
+
+The following features are totally new, none of them existed in the original mod/concept.
+These are the completely new features:
+
+    NEW: Gate Renaming
+    Now you can change the name of any Automatic Gate (This is fully compatible with the RenameContainers Mod)
+    Detailed features:
+        If the gate is unlocked, in the "Automatic Gate" submenu, there's an option to rename the gate
+        After selecting it, an TextBox will appear to set the new name
+        After changes, the Gate Container compartment (corner) will change it's title to the new name
+        Any new connected controllers will have the gate's new name
+            Already connected ones will update their names after using them
+        If you have the mod "RenameContainers", you can also change the name of the gate by clicking the title in the Gate Container compartment (corner) inventory screen
+            I used the same modData table as that mod, so renaming in both ways works fine
+
+    NEW: Automatic Gate Controller on the Belt
+    You can now put your Controllers on Belts! That opens up a new possibility!
+    After pressing the controller slot bound key:
+        If the controller IS NOT connected to a gate, nothing will happen.
+        If the controller IS connected to a gate, it will try to activate the controller
+            If the player is in range, and the gate still has charges left, it will be toggled!
+		Full suport for Gamepad
+            The controller can be used when in belt, using the Left DPad key
+
+    Gate Motor Sprite:
+    When the motor is successfully installed, the sprite will now change to a new one, to make it easier to distinguish an automatic gate from a normal gate
+    Detailed features:
+        After the installation, the gate texture will change, visually installing the motor to the gate
+        This is not the definitive version of that texture! It may change in the future...
+
+    Locking/Unlocking System:
+    A top request system, gates can be locked/unlocked when used or manually, blocking anyone without a controller to interact with it.
+    Also protects the batteries inside the gate.
+    Detailed features:
+        Now everytime the gate is CLOSED by a controller, it will be automatically locked. (changeable via the SandboxSettings)
+        When locked by a controller, the gate can only be open/unlock again with a connected controller.
+        The gate container where the batteries are located is also locked when gate is locked.
+        Gates can be manually locked/unlocked with a connected controller
+        Have good uses for multiplayer servers or mods that adds NPCs.
+
+    Connection System:
+    The frequency is set on the moment that the motor is installed, which allows for better interaction between gates and controllers.
+    Also with this new system, planned features will be better to implement
+    Detailed features:
+        The gate's frequency is defined when the automatic motor installation is done!
+        There is no limit of controllers connected to a same gate
+            New controllers can only be connected if the gate is unlocked
+        Added an option to reset the gate's frequency code
+            All connected controllers will not work anymore
+            You can only reset a gate frequency if it is unlocked
+        Added an option to clear a controller frequency
+            Useful when gates are reset/destroyed
+        If there are no controllers connected to a gate, and it is locked, there is no way to open/unlock it.
+
+    TimedActions to all interactions:
+    Every interaction with a gate or controller have a TimedAction.
+    Detailed features:
+        Gate interaction:
+            The actions are: Connect and Reset
+            Require a Wrench to operate.
+                Search on inventory and backpacks.
+                Returns the item to the correct place.
+            Need a bit of knowledge of Mechanics and Electrical to manage.
+            Take less time the more knowledge of Mechanics the player have.
+        Controller interaction:
+            The actions are: Disconnect and Copy
+            Require a Screwdriver to operate.
+                Search on inventory and backpacks.
+                Returns the item to the correct place.
+            Needs a bit of knowledge of Electrical to manage.
+            Take less time the more knowledge of Electrical the player have.
+
+    Sandbox Options:
+    Almost everything that should need a change can be modified in the SandboxOptions.
+    Settings that can be changed:
+        Automatically Lock gates when using controller
+            default = true
+        Configurable effective range for the controller
+            default: 35;  max:50,  min:8
+        Configurable battery total uses
+            default: 100; max:300, min:10
+        Motor installation requirements (MetalWelding)
+            default: 4;   max:10,  min:1
+        Controller interaction requirements (Electrical)
+            default: 1;   max:10,  min:1
+        Gate interaction requirements (Electrical)
+            default: 1;   max:10,  min:1
+        Crafting controllers requirements (Electrical)
+            default: 2;   max:10,  min:1
+        Crafting motors requirements (Electrical)
+            default: 3;   max:10,  min:1
+        Crafting motors requirements (Electrical)
+            default: 3;   max:10,  min:1
+
+Doing now:
+
+    Place controller in the Hotbar (belt) DONE!
+        Enable activation through bound key DONE!
+
+    Renaming gates:
+        Option on gate context menu DONE!
+        Change renderer on InventoryPage DONE!
+        Add compatibility with RenameContainers mod DONE!
+        Set a default name of the gate after installation and reset DONE!
+            That means that the name will also reset after frequency reset DONE!
+        Automatically rename controller if gate's name is different DONE!
+
+
+
+Planned features:
+
+Models and Textures:
+    Make a better model and texture for Controller
+    Make a better model and texture for Components
+    Make a better model and texture for Gate Magazine
+
+Motion sensor:
+    Automatically open gate using "sensors"
+    Check only for players far x tiles near the gate
+    Automatically close then player get far away 
+    
+Master Controller:
+    Double-click opens the nearest gate
+    ContextMenu with all paired gates option
+    Increased range?
+
+Keybinding to use controller:
+    ContextMenu option opens a small UI saying "Press any key"
+    That key is then bound to that controller, using it when pressed
+    Way to clear keybindings
+    DevNote: I need to come up with a way to do that recursively (without limits)
+
+Renaming gates:
+    Be able to rename a gate (shows in container name)
+    Rename every controller paired to said gate to the same name (stills with code)
+
+UI for gates managing.

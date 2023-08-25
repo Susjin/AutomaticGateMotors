@@ -1,0 +1,17 @@
+ContextMenu_FR = {
+
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Installer le Moteur du Portail Automatique",
+	ContextMenu_AutoGate_ConnectController = "Connecter la Télécommande du Portail Automatique",
+	ContextMenu_AutoGate_UseController = "Utiliser la Télécommande",
+	ContextMenu_AutoGate_Copy = "Copier la Fréquence du Portail Automatique",
+	ContextMenu_AutoGate_ClearController = "Déconnecter la Télécommande du Portail Automatique",
+	ContextMenu_AutoGate_LockGate = "Verrouiller le Portail Automatique",
+	ContextMenu_AutoGate_UnlockGate = "Déverrouiller le Portail Automatique",
+	ContextMenu_AutoGate_ResetGate = "Réinitialiser la Fréquence du Portail Automatique",
+	ContextMenu_AutoGate_GateMenu = "Portail Automatique",
+	ContextMenu_AutoGate_ControllerMenu = "Télécommande de Portail Automatique",
+	
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Renommer le Portail Automatique",
+}

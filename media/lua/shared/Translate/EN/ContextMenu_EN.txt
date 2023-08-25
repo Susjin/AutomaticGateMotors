@@ -1,0 +1,17 @@
+ContextMenu_EN = {
+
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Install Automatic Gate Motor",
+	ContextMenu_AutoGate_ConnectController = "Connect Automatic Gate Controller",
+	ContextMenu_AutoGate_UseController = "Use Controller",
+	ContextMenu_AutoGate_Copy = "Copy Automatic Gate Frequency",
+	ContextMenu_AutoGate_ClearController = "Disconnect Automatic Gate Controller",
+	ContextMenu_AutoGate_LockGate = "Lock Automatic Gate",
+	ContextMenu_AutoGate_UnlockGate = "Unlock Automatic Gate",
+	ContextMenu_AutoGate_ResetGate = "Reset Automatic Gate Frequency",
+	ContextMenu_AutoGate_GateMenu = "Automatic Gate",
+	ContextMenu_AutoGate_ControllerMenu = "Automatic Gate Controller",
+
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Rename Automatic Gate",
+}

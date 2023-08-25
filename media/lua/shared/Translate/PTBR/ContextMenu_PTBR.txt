@@ -1,0 +1,17 @@
+ContextMenu_PTBR = {
+
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Instalar Motor de Portão Automático",
+	ContextMenu_AutoGate_ConnectController = "Conectar Controle do Portão Automático",
+	ContextMenu_AutoGate_UseController = "Usar Controle",
+	ContextMenu_AutoGate_Copy = "Copiar Frequência do Portão Automático",
+	ContextMenu_AutoGate_ClearController = "Desconectar Controle do Portão Automático",
+	ContextMenu_AutoGate_LockGate = "Trancar Portão Automático",
+	ContextMenu_AutoGate_UnlockGate = "Destrancar Portão Automático",
+	ContextMenu_AutoGate_ResetGate = "Reiniciar Frequência do Portão Automático",
+	ContextMenu_AutoGate_GateMenu = "Portão Automático",
+	ContextMenu_AutoGate_ControllerMenu = "Controle do Portão Automático",
+	
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Renomear Portão Automático",
+}

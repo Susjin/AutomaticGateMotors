@@ -1,0 +1,13 @@
+IGUI_IT = {
+
+	IGUI_AutoGate_InstallComplete = "Cancello Automatico Installato!",
+	IGUI_AutoGate_Installing = "Installando il Cancello Automatico...",
+	IGUI_AutoGate_ConnectControllerDone = "Telecomando connesso al Cancello!",
+	IGUI_AutoGate_ClearingController = "Sto Scollegando il Telecomando...",
+	IGUI_AutoGate_ClearControllerDone = "Telecomando Scollegato!",
+	IGUI_AutoGate_CopyingFrom = "Sto Copiando la Frequenza...",
+	IGUI_AutoGate_CopyingTo = "Sto Impostando la Frequenza...",
+	IGUI_AutoGate_CopyingDone = "Copia del Telecomando Eseguita!",
+	IGUI_AutoGate_GateResetting = "Sto Resettando la Frequenza...",
+	IGUI_AutoGate_GateReset = "Frequenza del Telecomando Resettata!",
+}

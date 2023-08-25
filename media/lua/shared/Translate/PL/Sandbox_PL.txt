@@ -1,0 +1,25 @@
+Sandbox_PL = {
+ 
+    /* Version 1.0 */
+	Sandbox_AutoGate = "Automatyczny Motor Bramy",
+ 
+	Sandbox_AutoGate_AutoLockGate = "Automatycznie zablokuj bramê",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "Za ka¿dy razem kiedy brama bêdzie zamkniêta przez kontroler, on bêdzie zablokowana.",
+	Sandbox_AutoGate_ControllerRange = "Zasiêg kontrolera",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Maksymalny zasiêg z jakim kontroler mo¿e interaktowaæ z bram¹.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "U¿ycia baterii",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Iloœæ u¿yæ która ka¿da bateria posiada.",
+ 
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Wymagania do zainstalowania motora bramy",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Poziom spawania wymagany do zainstalowania motora bramy.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Wymagania do interakcji z kontrolerem",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Poziom elektryki wymagany do interakcji z kontrolerem.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Wymagania do interakcji z bram¹",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Poziom naprawy pojazdów wymagany do interakcji z bram¹.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Wymagania do stworzenia kontrolera",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Poziom elektryki wymagany do stworzenia kontrolera. (Wymaga restartu)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Wymagania do stworzenia motoru bramy",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Poziom elektryki wymagany do stworzenia motora bramy. (Wymaga restartu)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Wymagania do stworzenia motoru bramy",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Poziom naprawy pojazdów wymagany do stworzenia motora bramy. (Wymaga restartu)",
+}

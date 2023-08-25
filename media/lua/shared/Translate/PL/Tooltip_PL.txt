@@ -1,0 +1,37 @@
+Tooltip_PL = {
+ 
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Automatyczna Brama z Motorem",
+	Tooltip_AutoGate_InstallComponents = "Instalowanie Motora Automatycznej Bramy",
+	Tooltip_AutoGate_InstallComponentsDescription = "Bramy jakie maj¹ Motor Automatycznej Bramy zainstalowany mog¹ byæ otworzone/zamkniête zdalnie u¿ywaj¹c po³¹czonego Kontrolera Automatycznej Bramy.",
+	Tooltip_AutoGate_Connecting = "£¹czenie Kontrolera Automatycznej Bramy",
+	Tooltip_AutoGate_ConnectingDescription = "£¹czenie Kontrolera Automatycznej Bramy do tej bramy umo¿liwia do otwarcia/zamkniêcia Bramy zdalnie.",
+	Tooltip_AutoGate_Copy = "Kopiowanie Kontrolera Automatycznej Bramy",
+	Tooltip_AutoGate_CopyDescription = "Kopiuje czêstotliwoœæ wybrany kontrolerów automatycznej bramy do od³¹czonego kontrolera.",
+	Tooltip_AutoGate_Open = "U¿ywanie Kontrolera Automatycznej Bramy",
+	Tooltip_AutoGate_OpenDescription = "Prze³¹cza aktualnie po³¹czon¹ Automatyczn¹ Bramê.",
+	Tooltip_AutoGate_LockGate = "Zamykanie Automatycznej Bramy.",
+	Tooltip_AutoGate_LockGateDescription = "Zamyka aktualnie po³¹czon¹ bramê która jest: <LINE> Wybrana, albo: <LINE> Po³¹czona do wybranego kontrolera.",
+	Tooltip_AutoGate_UnlockGate = "Odblokowanie Automatycznej Bramy",
+	Tooltip_AutoGate_UnlockGateDescription = "Odblokowywujê aktualnie po³¹czon¹ bramê która jest : <LINE> Wybrana, albo: <LINE> Po³¹czona do wybranego kontrolera.",
+	Tooltip_AutoGate_Reset = "Resetowanie Czêstotliwoœci Automatycznej Bramy",
+	Tooltip_AutoGate_ResetDescription = "Resetuje kod czêstotliwoœci aktualnie wybranej automatycznej bramy.",
+	Tooltip_AutoGate_ClearController = "Roz³¹czanie Kontrolera Automatycznej Bramy",
+	Tooltip_AutoGate_ClearControllerDescription = "Roz³¹cza aktualnie wybrany kontroler od automatycznej bramy.",
+	Tooltip_AutoGate_UndoneDescription = "TA AKCJA NIE MO¯E ZOSTAÆ ODWO£ANA! <LINE> UPEWNIJ SIE ¯E BRAMA JEST ODBLOKOWANA!",
+	Tooltip_AutoGate_UndoneFootNote = "Mo¿esz tylko po³¹czyæ kontroler jeœli brama jest odblokowana jeœli brama jest odblokowana."
+	Tooltip_AutoGate_CantInstallFootNote = "Nie mo¿na instalowaæ motoru gdy brama jest otwarta!"
+	Tooltip_AutoGate_CantLock = "Nie mo¿na zablokowaæ bramy gdy jest otwarta!"
+	Tooltip_AutoGate_BatteryCharge = "£adunek baterii bramy",
+	Tooltip_AutoGate_NoBatteries = "Jakakolwiek bateria samochodowa na bramie",
+	Tooltip_AutoGate_GateNotFound = "Automatyczna brama po³¹czona do tego <LINE> kontrolera jest poza zasiêgiem",
+	Tooltip_AutoGate_GateNotFoundFootNote = "Mog³a zostaæ zniszczona albo jej czêstotliwoœæ zosta³a zresetowana",
+	Tooltip_AutoGate_GateComponents = "Zainstaluj ten motor na jakiejkolwiek bramie ¿eby otwieraæ i zamykaæ przez kontroler.",
+	Tooltip_AutoGate_AutoGateMagazine = "Poradnik posiadaj¹cy wszystkie przepisy i procedury do robienia Automatycznych Bram.",
+ 
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Zmiana nazwy Automatycznej Bramy",
+	Tooltip_AutoGate_RenameDescription = "Zmieñ nazwê aktualnie wybranej bramy na inn¹. Kontrolery które s¹ po³¹czone bêd¹ mia³y t¹ sam¹ nazwê",
+	Tooltip_AutoGate_RenameFootNote = "Kontrolery pod³¹czone bêd¹ mia³y zmienion¹ nazwê po u¿yciu.",
+	Tooltip_AutoGate_GateController = "Ten kontroler mo¿e zostaæ u¿yty do otwarcia i zamkniêcia po³¹czonych bram które maj¹ zainstalowane Motor Automatycznych Bram (Mo¿e zostaæ za³o¿ony na pasek)",
+}

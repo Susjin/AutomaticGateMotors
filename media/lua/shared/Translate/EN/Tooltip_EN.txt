@@ -1,0 +1,37 @@
+Tooltip_EN = {
+
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Automatic Gate with Motor",
+	Tooltip_AutoGate_InstallComponents = "Installing Automatic Gate Motor",
+	Tooltip_AutoGate_InstallComponentsDescription = "Gates that have a Automatic Gate Motor installed can be opened/closed remotely using a connected Automatic Gate Controller.",
+	Tooltip_AutoGate_Connecting = "Connecting Automatic Gate Controller",
+	Tooltip_AutoGate_ConnectingDescription = "Connecting a Automatic Gate Controller to this gate allows it to open/close the Gate remotely.",
+	Tooltip_AutoGate_Copy = "Copying Automatic Gate Controller",
+	Tooltip_AutoGate_CopyDescription = "Copies the frequency of the selected automatic gate controller to a disconnected controller.",
+	Tooltip_AutoGate_Open = "Using Automatic Gate Controller",
+	Tooltip_AutoGate_OpenDescription = "Toggles current connected Automatic Gate.",
+	Tooltip_AutoGate_LockGate = "Locking Automatic Gate",
+	Tooltip_AutoGate_LockGateDescription = "Locks the current selected gate that is: <LINE> Selected, or: <LINE> Connected to the selected controller.",
+	Tooltip_AutoGate_UnlockGate = "Unlocking Automatic Gate",
+	Tooltip_AutoGate_UnlockGateDescription = "Unlocks the current selected gate that is: <LINE> Selected, or: <LINE> Connected to the selected controller.",
+	Tooltip_AutoGate_Reset = "Resetting Automatic Gate Frequency",
+	Tooltip_AutoGate_ResetDescription = "Resets the frequency code of the current selected automatic gate.",
+	Tooltip_AutoGate_ClearController = "Disconnecting Automatic Gate Controller",
+	Tooltip_AutoGate_ClearControllerDescription = "Disconnects the current selected controller from a automatic gate.",
+	Tooltip_AutoGate_UndoneDescription = "THIS ACTION CANNOT BE UNDONE! <LINE> MAKE SURE THE GATE IS UNLOCKED!",
+	Tooltip_AutoGate_UndoneFootNote = "You can only connect a controller if the gate is unlocked."
+	Tooltip_AutoGate_CantInstallFootNote = "Can't install the motor while the gate is open!"
+	Tooltip_AutoGate_CantLock = "Can't lock the gate while it is open!"
+	Tooltip_AutoGate_BatteryCharge = "Gate battery charge",
+	Tooltip_AutoGate_NoBatteries = "Any car battery on the gate",
+	Tooltip_AutoGate_GateNotFound = "The automatic gate connected to this <LINE> controller is out of it's broadcast range!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "May have been destroyed or got its frequency reset",
+	Tooltip_AutoGate_GateComponents = "Install this motor on any wooden gate to open and close it through a controller.",
+	Tooltip_AutoGate_AutoGateMagazine = "Instructions manual having all schematics and procedures for making Automatic Gates.",
+
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Renaming Automatic Gate",
+	Tooltip_AutoGate_RenameDescription = "Change the name of the current selected automatic gate to any other name. Controllers that are connected will have the same name",
+	Tooltip_AutoGate_RenameFootNote = "Controllers already connected will get renamed after use.",
+	Tooltip_AutoGate_GateController = "This controller can be used to open and close connected gates with an Automatic Gate Motor installed. (Can be placed on a Belt)",
+}

@@ -1,0 +1,31 @@
+Tooltip_IT = {
+
+	Tooltip_AutoGate_AutomaticGateMotor = "Cancello Automatico Motorizzato",
+	Tooltip_AutoGate_InstallComponents = "Installa Motore del Cancello",
+	Tooltip_AutoGate_InstallComponentsDescription = "I cancelli con un motore installato possono essere aperti/chiusi tramite un Telecomando del Cancello.",
+	Tooltip_AutoGate_Connecting = "Connessione del Telecomando del Cancello",
+	Tooltip_AutoGate_ConnectingDescription = "Connettere un telecomando al cancello ti permetterà di aprirlo a distanza.",
+	Tooltip_AutoGate_Copy = "Copia la frequenza del Telecomando",
+	Tooltip_AutoGate_CopyDescription = "Copia la Frequenza su un telecomando che non è connesso ad altre frequenze.",
+	Tooltip_AutoGate_Open = "Usare il Telecomando del Cancello",
+	Tooltip_AutoGate_OpenDescription = "Apre o Chiude il cancello alla quale è connesso.",
+	Tooltip_AutoGate_LockGate = "Bloccare il Cancello",
+	Tooltip_AutoGate_LockGateDescription = "Blocca il cancello: <LINE> Selezionato, oppure: <LINE> Collegato al Telecomando selezionato.",
+	Tooltip_AutoGate_UnlockGate = "Sblocca il Cancello",
+	Tooltip_AutoGate_UnlockGateDescription = "Sblocca il cancello: <LINE> Selezionato, oppure: <LINE> Collegato al Telecomando selezionato.",
+	Tooltip_AutoGate_Reset = "Resetta la Frequenza Automatica del Cancello",
+	Tooltip_AutoGate_ResetDescription = "Resetta la Frequenza Automatica del Cancello.",
+	Tooltip_AutoGate_ClearController = "Disconnetti il Telecomando dal Cancello",
+	Tooltip_AutoGate_ClearControllerDescription = "Disconnette il telecomando dal cancello al quale è vincolato.",
+	Tooltip_AutoGate_UndoneDescription = "QUESTA OPERAZIONE NON PUO' ESSERE ANNULLATA<LINE> ASSICURATI CHE IL CANCELLO SIA SBLOCCATO!",
+	Tooltip_AutoGate_UndoneFootNote = "puoi connettere il telecomando solo se il cancello è SBLOCCATO."
+	Tooltip_AutoGate_CantInstallFootNote = "Non puoi installare il motore se il cancello è APERTO"
+	Tooltip_AutoGate_CantLock = "Non puoi bloccare un cancello aperto!"
+	Tooltip_AutoGate_BatteryCharge = "Carica della Batteria del Cancello",
+	Tooltip_AutoGate_NoBatteries = "Qualsiasi batteria per auto nel cancello",
+	Tooltip_AutoGate_GateNotFound = "l cancello connesso a questo Telecomando <LINE> è fuori portata!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "Potrebbe essere stato distrutto o aver ripristinato la frequenza",
+	Tooltip_AutoGate_GateComponents = "Installa questo motore su qualsiasi cancello in legno per aprirlo e chiuderlo tramite un Telecomando.",
+	Tooltip_AutoGate_GateController = "Questo Telecomando può essere utilizzato per aprire e chiudere cancelli collegati con un motore.",
+	Tooltip_AutoGate_AutoGateMagazine = "il Manuale di istruzioni con tutti gli schemi e le procedure per la realizzazione di cancelli automatici.",
+}

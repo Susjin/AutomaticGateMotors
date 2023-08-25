@@ -1,0 +1,17 @@
+ContextMenu_RU = {
+
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Установить автоматический двигатель на ворота",
+	ContextMenu_AutoGate_ConnectController = "Подключить контроллер к автоматическим воротам",
+	ContextMenu_AutoGate_UseController = "Использовать контроллер",
+	ContextMenu_AutoGate_Copy = "Копировать частоту контроллера",
+	ContextMenu_AutoGate_ClearController = "Отсоеденить контроллер от автоматических ворот",
+	ContextMenu_AutoGate_LockGate = "Блокировать автоматические ворота",
+	ContextMenu_AutoGate_UnlockGate = "Разблокировать автоматические ворота",
+	ContextMenu_AutoGate_ResetGate = "Сброс частоты контроллера",
+	ContextMenu_AutoGate_GateMenu = "Автоматические ворота",
+	ContextMenu_AutoGate_ControllerMenu = "Контроллер автоматических ворот",
+	
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Переименовать автоматические ворота",
+}
