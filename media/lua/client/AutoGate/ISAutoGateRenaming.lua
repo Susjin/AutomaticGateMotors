@@ -5,7 +5,7 @@
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
 --- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
----	All the User Interface methods are listed in this file
+---	All the methods related to the Renaming are listed in this file
 --- @class ISAutoGateRenaming
 --- @return ISAutoGateRenaming
 local ISAutoGateRenaming = {}
