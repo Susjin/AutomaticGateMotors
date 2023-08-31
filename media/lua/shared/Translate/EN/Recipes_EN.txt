@@ -5,5 +5,5 @@ Recipes_EN = {
 	Recipe_Create_Gate_Components = "Make Automatic Gate Motor",
 
 	/* Version 1.1 */
-	Recipe_CanInstallGate = "Automatic Gate Motor Installation",
+	Recipe_CanInstallGate = "Install Automatic Gate Motor",
 }
