@@ -3,6 +3,7 @@ require 'Items/ProceduralDistributions'
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	@class AutoGateItemDistributions:
 ---	All the inserts in the distributions list are listed in this file

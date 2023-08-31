@@ -3,16 +3,16 @@
 ---	Automatic Gate Motors
 ---	@author peteR_pg
 ---	Steam profile: https://steamcommunity.com/id/peter_pg/
+--- GitHub Repository: https://github.com/Susjin/AutomaticGateMotors
 
 ---	All the Tooltips methods are listed in this file
 ---	@class ISAutoGateTooltip
-	ISAutoGateTooltip = {}
+--- @return ISAutoGateTooltip
+	local ISAutoGateTooltip = {}
 ----------------------------------------------------------------------------------------------
 
---Local tables to store all functions
----@see ISAutoGateUtils
----@type ISAutoGateUtils
-local GateUtils = ISAutoGateUtils
+---Local tables to store all functions
+local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 --Local variables
 local AutoGateVars   = SandboxVars.AutoGate
@@ -181,7 +181,7 @@ function ISAutoGateTooltip.useFromGateOrControllerConnected(useControllerOption,
 		useControllerOption.toolTip.description = useControllerOption.toolTip.description .. getText("Tooltip_craft_Needs") .. ": <LINE> "
 		if (batteryCharge.total <= 0) then colors.colorUse = colors.colorBad else colors.colorUse = colors.colorGood end
 		if (batteryCharge.count > 0) then
-			useControllerOption.toolTip.description = useControllerOption.toolTip.description .. colors.colorUse .. getText("Tooltip_AutoGate_BatteryCharge") .. " " .. tostring(GateUtils.roundNumber(batteryCharge.total*AutoGateVars.BatteryMaxUseCount)) .. "/" .. tostring(AutoGateVars.BatteryMaxUseCount*batteryCharge.count) .. " <LINE> "
+			useControllerOption.toolTip.description = useControllerOption.toolTip.description .. colors.colorUse .. getText("Tooltip_AutoGate_BatteryCharge") .. " " .. tostring(ISAutoGateUtils.roundNumber(batteryCharge.total*AutoGateVars.BatteryMaxUseCount)) .. "/" .. tostring(AutoGateVars.BatteryMaxUseCount*batteryCharge.count) .. " <LINE> "
 		else
 			useControllerOption.toolTip.description = useControllerOption.toolTip.description .. colors.colorBad .. getText("Tooltip_AutoGate_NoBatteries") .. " <LINE> "
 		end
@@ -200,9 +200,9 @@ function ISAutoGateTooltip.lockGate(lockOption, gateLock, gateOpen)
     lockOption.toolTip:initialise()
     lockOption.toolTip:setVisible(true)
 	lockOption.toolTip:setTexture(remoteTexture)
-    lockOption.toolTip:setName(GateUtils.getGateLockText(gateLock, "tooltipTitle"))
+    lockOption.toolTip:setName(ISAutoGateUtils.getGateLockText(gateLock, "tooltipTitle"))
 
-	lockOption.toolTip.description = colors.colorWhite .. GateUtils.getGateLockText(gateLock, "tooltipDescription") .. " <LINE> "
+	lockOption.toolTip.description = colors.colorWhite .. ISAutoGateUtils.getGateLockText(gateLock, "tooltipDescription") .. " <LINE> "
 	if gateOpen then lockOption.toolTip.footNote = getText("Tooltip_AutoGate_CantLock") end
 end
 
@@ -253,3 +253,6 @@ function ISAutoGateTooltip.clearController(clearControllerOption, electrical, sc
 		clearControllerOption.toolTip.description = clearControllerOption.toolTip.description .. colors.colorBad .. getText("Tooltip_AutoGate_UndoneDescription") .. " <LINE> "
 	end
 end
+
+------------------ Returning file for 'require' ------------------
+return ISAutoGateTooltip
