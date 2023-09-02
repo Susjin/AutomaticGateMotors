@@ -120,8 +120,8 @@ function ISAutoGateUtils.getAutoGateRecipes()
 	local recipesTable = {}
 	local count = 0
 	for i=0, allRecipes:size()-1 do
-		currentRecipe = allRecipes:get(i)
-		moduleName = currentRecipe:getModule():getName()
+		local currentRecipe = allRecipes:get(i)
+		local moduleName = currentRecipe:getModule():getName()
 		if (moduleName == "AutoGate") then
 			table.insert(recipesTable, currentRecipe)
 			count = count + 1
@@ -163,6 +163,7 @@ end
 
 function ISAutoGateUtils.setFreeRecipesProfessions(modRecipes)
 	local engineer = ProfessionFactory.getProfession("engineer")
+	if not engineer then return end
 	engineer:getFreeRecipes():add("CanInstallGate")
 	if modRecipes then
 		for i=1, #modRecipes do
