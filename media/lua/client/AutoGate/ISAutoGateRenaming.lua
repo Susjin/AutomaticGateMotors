@@ -14,8 +14,7 @@ local ISAutoGateRenaming = {}
 local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
 
 
------------------- Functions related to Renaming gates and controllers ------------------
-
+-- ---------------- Functions related to Renaming gates and controllers ---------------- --
 ---Add to vanilla functionality of rendering container's page title, to render the gate custom name
 ---"Fully compatible with the Rename Containers mod"
 local vanilla_prerender = ISInventoryPage.prerender

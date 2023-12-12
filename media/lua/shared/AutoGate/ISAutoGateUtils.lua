@@ -106,7 +106,7 @@ end
 ---@param message String The message that will be printed on the console
 function ISAutoGateUtils.debugMessage(message)
 	if not getDebug() then return end
-	local str = string.format("DEBUGAutoGateReborn: %s\nDEBUGAutoGateReborn: Message time: %s", tostring(message), tostring(os.date()))
+	local str = string.format("DEBUGAutomaticGateMotors: %s\nDEBUGAutomaticGateMotors: Message time: %s", tostring(message), tostring(os.date()))
 	print(str)
 end
 
@@ -597,24 +597,6 @@ function ISAutoGateUtils.getFrequency(obj)
     return frequency
 end
 
----Copies the frequency from one controller to another
----@param controllerTo InventoryItem Controller without a frequency
----@param controllerFrom InventoryItem Controller with a frequency
----@return boolean Returns true if the action is successful, if not, returns false
-function ISAutoGateUtils.makeControllerCopy(controllerFrom, controllerTo)
-    local frequency = ISAutoGateUtils.getFrequency(controllerFrom)
-    if frequency then
-        controllerTo:getModData()["AutoGateFrequency_X"] = frequency[1]
-        controllerTo:getModData()["AutoGateFrequency_Y"] = frequency[2]
-        controllerTo:getModData()["AutoGateFrequency_Z"] = frequency[3]
-        controllerTo:getModData()["AutoGateFrequency_code"] = frequency[4]
-		controllerTo:setName(controllerFrom:getName())
-		controllerTo:setCustomName(true)
-		return true
-    end
-	return false
-end
-
 ---Connects a controller to a gate, copying it's frequency
 ---@param controller InventoryItem Controller without a frequency
 ---@param gate IsoThumpable Gate with a motor installed
@@ -622,8 +604,8 @@ end
 function ISAutoGateUtils.connectGateController(controller, gate)
 	local frequency = ISAutoGateUtils.getFrequency(gate)
 	local gateName = gate:getModData()["RenameContainer_CustomName"]
-	if frequency[4] > 9999 then ISAutoGateUtils.resetGate(gate, false); frequency = ISAutoGateUtils.getFrequency(gate) end
-	if frequency then
+	if frequency[4] and frequency[4] > 9999 then ISAutoGateUtils.resetGate(gate, false); frequency = ISAutoGateUtils.getFrequency(gate) end
+	if frequency[4] then
 		controller:getModData()["AutoGateFrequency_X"] = frequency[1]
 		controller:getModData()["AutoGateFrequency_Y"] = frequency[2]
 		controller:getModData()["AutoGateFrequency_Z"] = frequency[3]
@@ -634,6 +616,24 @@ function ISAutoGateUtils.connectGateController(controller, gate)
 		end
 		controller:setName(getText("ContextMenu_AutoGate_GateMenu") .. " - No. ".. frequency[4])
 		controller:setCustomName(true)
+		return true
+	end
+	return false
+end
+
+---Copies the frequency from one controller to another
+---@param controllerTo InventoryItem Controller without a frequency
+---@param controllerFrom InventoryItem Controller with a frequency
+---@return boolean Returns true if the action is successful, if not, returns false
+function ISAutoGateUtils.makeControllerCopy(controllerFrom, controllerTo)
+	local frequency = ISAutoGateUtils.getFrequency(controllerFrom)
+	if frequency then
+		controllerTo:getModData()["AutoGateFrequency_X"] = frequency[1]
+		controllerTo:getModData()["AutoGateFrequency_Y"] = frequency[2]
+		controllerTo:getModData()["AutoGateFrequency_Z"] = frequency[3]
+		controllerTo:getModData()["AutoGateFrequency_code"] = frequency[4]
+		controllerTo:setName(controllerFrom:getName())
+		controllerTo:setCustomName(true)
 		return true
 	end
 	return false
