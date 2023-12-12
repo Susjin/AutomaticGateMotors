@@ -16,7 +16,6 @@ local AutoGateVars = SandboxVars.AutoGate
 
 --Local tables to store all functions
 local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
-local ISAutoGateRenaming = require "AutoGate/ISAutoGateRenaming"
 local ISAutoGateTimedActions = require "AutoGate/ISAutoGateTimedActions"
 local ISAutoGateTooltip = require "AutoGate/ISUI/ISAutoGateTooltip"
 
@@ -75,7 +74,7 @@ function ISAutoGateContextMenu.doWorldMenu(playerNum, contextMenu, objects)
 				ISAutoGateTooltip.useFromGateOrControllerConnected(useFromGateMenu, totalBatteryCharge, true, playerDistanceValid)
 			end
 			------------------ Connect, Reset & Rename Options ------------------
-			local renameOption = gateSubMenu:addOption (getText("ContextMenu_AutoGate_RenameGate"), gate, ISAutoGateRenaming.renameGateContainer, player)
+			local renameOption = gateSubMenu:addOption(getText("ContextMenu_AutoGate_RenameGate"), gate, ISAutoGateTimedActions.renameGate, player)
 			if (electrical < AutoGateVars.LevelRequirementsControllerInteraction) or (mechanics < AutoGateVars.LevelRequirementsGateInteraction) or
 				(wrench < 1) then renameOption.notAvailable = true end
 			ISAutoGateTooltip.renameGate(renameOption, electrical, mechanics, wrench, gateName)
@@ -92,11 +91,11 @@ function ISAutoGateContextMenu.doWorldMenu(playerNum, contextMenu, objects)
 				gateSubMenu:removeOptionByName(getText("ContextMenu_AutoGate_ConnectController"))
 				gateSubMenu:removeOptionByName(getText("ContextMenu_AutoGate_RenameGate"))
 				gateSubMenu:removeOptionByName(getText("ContextMenu_AutoGate_ResetGate"))
-				if #gateSubMenu.options == 0 then
-					contextMenu:removeOptionByName(getText("ContextMenu_AutoGate_GateMenu"))
-				end
 			end
-        else
+			if gateSubMenu:isEmpty() then
+				contextMenu:removeOptionByName(getText("ContextMenu_AutoGate_GateMenu"))
+			end
+		else
 			------------------ Gate Motor Install ------------------
             if ISAutoGateUtils.predicateInstallOption(player) then
 				ISAutoGateTimedActions.addOptionInstallAutomaticMotor(player, contextMenu, gate)

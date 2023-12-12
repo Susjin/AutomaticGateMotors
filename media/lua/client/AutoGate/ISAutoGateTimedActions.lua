@@ -115,7 +115,7 @@ end
 ------------------ Functions related to gate installation ------------------
 
 ---Adds the Install Automatic Motor option to a context menu
----@param player IsoPlayer Player
+---@param player IsoPlayer Player doing the action
 ---@param context ISContextMenu ContextMenu when clicked on a gate
 ---@param gate IsoThumpable Gate without motor installed
 function ISAutoGateTimedActions.addOptionInstallAutomaticMotor(player, context, gate)
@@ -144,7 +144,7 @@ function ISAutoGateTimedActions.addOptionInstallAutomaticMotor(player, context, 
 end
 
 ---Executes the TimedAction Install
----@param player IsoPlayer Iso Player
+---@param player IsoPlayer Player doing the action
 ---@param gate IsoThumpable Gate without motor installed
 function ISAutoGateTimedActions.queueInstallAutomaticGateMotor(player, gate)
     local playerSquare = player:getSquare()
@@ -163,7 +163,7 @@ end
 ------------------ Functions related to gate and controller interactions ------------------
 
 ---Connects a empty controller on a gate
----@param player IsoPlayer Player
+---@param player IsoPlayer Player doing the action
 ---@param emptyController InventoryItem Controller without a connection
 ---@param gate IsoThumpable Gate with motor installed
 function ISAutoGateTimedActions.connectControllerToGate(player, emptyController, gate)
@@ -182,8 +182,26 @@ function ISAutoGateTimedActions.connectControllerToGate(player, emptyController,
     ISTimedActionQueue.add(ISAutoGateClearQueueAction:new(player))
 end
 
+---Changes the name of a automatic gate
+---@param player IsoPlayer Player doing the action
+---@param gate IsoThumpable Gate with motor installed
+function ISAutoGateTimedActions.renameGate(gate, player)
+    local playerSquare = player:getSquare()
+    local gateCornerObject = ISAutoGateUtils.getGateFromSquare(ISAutoGateUtils.getGateCorner(gate))
+
+    local gateSquare = gateCornerObject:getSquare()
+    local gateOppositeSquare = gateCornerObject:getOppositeSquare()
+    local doorSquare = (gateOppositeSquare:DistTo(playerSquare) < gateSquare:DistTo(playerSquare)) and gateOppositeSquare or gateSquare
+    ISTimedActionQueue.add(ISWalkToTimedAction:new(player, doorSquare))
+
+    local wrench, returnItems = ISAutoGateTimedActions.checkInteractItem(player, "gate")
+    ISTimedActionQueue.add(ISAutoGateInteractAction:new(player, gate, wrench, "rename"))
+    ISCraftingUI.ReturnItemsToOriginalContainer(player, returnItems)
+    ISTimedActionQueue.add(ISAutoGateClearQueueAction:new(player))
+end
+
 ---Resets a automatic gate frequency
----@param player IsoPlayer Player
+---@param player IsoPlayer Player doing the action
 ---@param gate IsoThumpable Gate with motor installed
 function ISAutoGateTimedActions.resetGate(gate, player)
     local playerSquare = player:getSquare()
@@ -201,7 +219,7 @@ function ISAutoGateTimedActions.resetGate(gate, player)
 end
 
 ---Copies the frequency from a connected controller to another
----@param player IsoPlayer Player
+---@param player IsoPlayer Player doing the action
 ---@param fromConnectedController InventoryItem Controller with a connection
 ---@param toEmptyController InventoryItem Controller without a connection
 function ISAutoGateTimedActions.copyControllerToAnother(player, fromConnectedController, toEmptyController)
@@ -213,7 +231,7 @@ function ISAutoGateTimedActions.copyControllerToAnother(player, fromConnectedCon
 end
 
 ---Disconnects a controller from a gate
----@param player IsoPlayer Player
+---@param player IsoPlayer Player doing the action
 ---@param connectedController InventoryItem Already connected controller
 function ISAutoGateTimedActions.disconnectController(player, connectedController)
     local screwdriver, returnItems = ISAutoGateTimedActions.checkInteractItem(player, "controller")

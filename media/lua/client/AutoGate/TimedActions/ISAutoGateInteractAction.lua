@@ -14,13 +14,14 @@ require "TimedActions/ISBaseTimedAction"
 ---	@return ISAutoGateInteractAction
 	local ISAutoGateInteractAction = ISBaseTimedAction:derive("ISAutoGateInteractAction")
 ----------------------------------------------------------------------------------------------
-
 --Setting up locals
 local ISAutoGateUtils = require "AutoGate/ISAutoGateUtils"
+local ISAutoGateRenaming = require "AutoGate/ISAutoGateRenaming"
 
 local textsTypes = {
 	reset = getText("IGUI_AutoGate_GateResetting"),
-	connect = getText("IGUI_AutoGate_CopyingFrom")
+	connect = getText("IGUI_AutoGate_CopyingFrom"),
+	rename = getText("ContextMenu_AutoGate_RenameGate") --TODO: Better translation string
 }
 
 local function predicateWrench(wrench, player)
@@ -73,6 +74,8 @@ function ISAutoGateInteractAction:perform()
 	if self.actionToBeExecuted == "reset" then
 		ISAutoGateUtils.resetGate(self.gate, true)
 		HaloTextHelper.addText(self.character, getText("IGUI_AutoGate_GateReset"), HaloTextHelper.getColorGreen())
+	elseif self.actionToBeExecuted == "rename" then
+		ISAutoGateRenaming.renameGateContainer(self.gate, self.character)
 	end
 	--Finish TimedAction
 	ISBaseTimedAction.perform(self)
