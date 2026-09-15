@@ -1,0 +1,7 @@
+ItemName_EN = {
+
+    /* Version 1.0 */
+	ItemName_AutoGate.GateController = "Automatic Gate Controller",
+	ItemName_AutoGate.GateComponents = "Automatic Gate Motor",
+	ItemName_AutoGate.AutoGateMag = "All about Automatic Gates",
+}

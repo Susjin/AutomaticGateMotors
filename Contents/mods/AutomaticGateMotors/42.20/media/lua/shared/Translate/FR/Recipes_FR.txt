@@ -1,0 +1,9 @@
+Recipes_FR = {
+ 
+	/* Version 1.0 */
+	Recipe_Create_Controller = "Créer une Télécommande de Portail Automatique",
+	Recipe_Create_Gate_Components = "Créer un Moteur de Portail Automatique",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Installer le Moteur du Portail Automatique",
+}

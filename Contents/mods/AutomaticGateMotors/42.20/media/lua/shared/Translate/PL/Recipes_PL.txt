@@ -1,0 +1,9 @@
+Recipes_PL = {
+ 
+    /* Version 1.0 */
+	Recipe_Create_Controller = "Stwórz kontroler automatycznej bramy",
+	Recipe_Create_Gate_Components = "Stwórz motor automatycznej bramy",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Zainstaluj Motor Automatycznej Bramy",
+}

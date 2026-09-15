@@ -1,0 +1,26 @@
+Sandbox_CN = {
+ 
+	Sandbox_AutoGate = "自动门闸机",
+ 
+	Sandbox_AutoGate_AutoLockGate = "自动门闸机自动锁门设定",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "如勾选，通过遥控器关门时，会同时自动将门上锁。",
+	Sandbox_AutoGate_ControllerRange = "自动门闸机遥控范围",
+	Sandbox_AutoGate_ControllerRange_tooltip = "自动门闸机最大遥控范围",
+	Sandbox_AutoGate_BatteryMaxUseCount = "汽车电池可使用次数",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "每颗满电的汽车电池可供自动门闸机使用几次",
+ 
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "自动门闸机安装需求技能等级——金工",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "安装自动门闸机最低需求几级金工技能",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "自动门闸机遥控器交互需求技能等级——电工",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "自动门闸机遥控器交互最低需求几级电工技能",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "自动门闸机交互需求技能等级——技工",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "自动门闸机交互最低需求几级技工技能",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "自动门闸机遥控器制造需求技能等级——电工（需要重启才能生效）",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "制造自动门闸机遥控器最低需求几级电工技能（需要重启才能生效）",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "自动门闸机制造需求技能等级——电工（需要重启才能生效）",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "制造自动门闸机最低需求几级电工技能（需要重启才能生效）",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "自动门闸机制造需求技能等级——技工（需要重启才能生效）",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "制造自动门闸机最低需求几级技工技能（需要重启才能生效）",
+ 
+ 
+}

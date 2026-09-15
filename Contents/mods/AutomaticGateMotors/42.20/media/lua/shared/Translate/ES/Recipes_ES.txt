@@ -1,0 +1,9 @@
+Recipes_ES = {
+ 
+    /* Version 1.0 */
+	Recipe_Create_Controller = "Crear mando de puerta automática",
+	Recipe_Create_Gate_Components = "Crear motor de puerta automática",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Instalar motor para puertas automáticas",
+}

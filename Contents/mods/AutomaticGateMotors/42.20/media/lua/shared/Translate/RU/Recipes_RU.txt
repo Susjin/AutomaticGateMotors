@@ -1,0 +1,9 @@
+Recipes_RU = {
+
+	/* Version 1.0 */
+	Recipe_Create_Controller = "Сделать контроллер автоматический ворот",
+	Recipe_Create_Gate_Components = "Сделать мотор для автоматических ворот",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "“становить автоматический двигатель на ворота",
+}

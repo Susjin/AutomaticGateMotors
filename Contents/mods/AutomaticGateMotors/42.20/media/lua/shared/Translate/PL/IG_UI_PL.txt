@@ -1,0 +1,18 @@
+IGUI_PL = {
+ 
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "Automatyczna Brama zainstalowana pomyœlnie!",
+	IGUI_AutoGate_Installing = "Instalowanie Motoru Automatycznej Bramy...",
+	IGUI_AutoGate_ConnectControllerDone = "Kontroler Automatycznej Bramy po³¹czony!",
+	IGUI_AutoGate_ClearingController   = "Roz³¹czanie kontrolera..",
+	IGUI_AutoGate_ClearControllerDone   = "Kontroler Automatycznej Bramy roz³¹czony!",
+	IGUI_AutoGate_CopyingFrom = "Uzyskiwanie czêstotliwoœci...",
+	IGUI_AutoGate_CopyingTo = "Ustawianie czêstotliwoœci...",
+	IGUI_AutoGate_CopyingDone = "Kontroler Automatycznej Bramy pomyœlnie skopiowany!",
+	IGUI_AutoGate_GateResetting = "Resetowanie czêstotliwoœci...",
+	IGUI_AutoGate_GateReset = "Czêstotliwoœæ Automatycznej Bramy zresetowana!",
+ 
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Zmieñ nazwê tej Automatycznej Bramie",
+	IGUI_AutoGate_RenameGateDone = "Nazwa Automatycznej Bramy pomyœlnie zmieniona!",
+}

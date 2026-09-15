@@ -1,0 +1,25 @@
+Sandbox_RU = {
+
+	/* Version 1.0 */
+	Sandbox_AutoGate = "Автоматические ворота - настройки",
+
+	Sandbox_AutoGate_AutoLockGate = "Автоматически запирать ворота",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "Каждый раз, когда ворота закрываются контроллером, они также будут заблокированы.",
+	Sandbox_AutoGate_ControllerRange = "Диапазон контроллера",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Максимальный диапазон, на котором контроллер может взаимодействовать с воротами.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Заряд батареи",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Общее количество использований каждой батареи.",
+	
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Требования к установке двигателя",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Уровень металлообработки, необходимый для установки привода ворот.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Требования к взаимодействию с контроллером",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Уровень электрики, необходимый для взаимодействия с контроллером.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Требования к взаимодействию со шлюзом",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Уровень механики, необходимый для взаимодействия с воротами.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Требования к контроллеру",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Уровень электрики, необходимый для изготовления контроллеров. (требуется перезагрузка)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Требования к мотору ворот",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Уровень электрики, необходимый для изготовления моторов ворот. (требуется перезагрузка)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Требования к мотору ворот",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Уровень механики, необходимый для изготовления моторов для ворот. (требуется перезагрузка)",
+}

@@ -1,0 +1,18 @@
+IGUI_ES = {
+ 
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "¡Puerta automática instalada correctamente!",
+	IGUI_AutoGate_Installing = "Instalando motor de puerta automática...",
+	IGUI_AutoGate_ConnectControllerDone = "¡Mando de puerta automática conectado!",
+	IGUI_AutoGate_ClearingController   = "Desconectando mando...",
+	IGUI_AutoGate_ClearControllerDone   = "¡Mando de puerta automática desconectado!",
+	IGUI_AutoGate_CopyingFrom = "Consiguiendo frecuencia...",
+	IGUI_AutoGate_CopyingTo = "Aplicando frecuencia...",
+	IGUI_AutoGate_CopyingDone = "¡Mando de puerta automática copiado correctamente!",
+	IGUI_AutoGate_GateResetting = "Reiniciando frecuencia...",
+	IGUI_AutoGate_GateReset = "¡Frecuencia de puerta automática reiniciado correctamente!",
+ 
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Cambiar el nombre de esta puerta automática",
+	IGUI_AutoGate_RenameGateDone = "¡Puerta automática renombrada correctamente!",
+}

@@ -1,0 +1,18 @@
+IGUI_PTBR = {
+
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "Motor de portão automático instalado com sucesso!",
+	IGUI_AutoGate_Installing = "Instalando Motor de Portão Automático...",
+	IGUI_AutoGate_ConnectControllerDone = "Controle do portão automático conectado!",
+	IGUI_AutoGate_ClearingController   = "Desconectando controle...",
+	IGUI_AutoGate_ClearControllerDone   = "Controle do portão automático desconectado!",
+	IGUI_AutoGate_CopyingFrom = "Pegando frequência...",
+	IGUI_AutoGate_CopyingTo = "Colocando frequência...",
+	IGUI_AutoGate_CopyingDone = "Controle do portão automático copiado!",
+	IGUI_AutoGate_GateResetting = "Reiniciando frequência...",
+	IGUI_AutoGate_GateReset = "Frequência do portão automático reiniciada!",
+	
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Mude o nome deste Portão Automático",
+	IGUI_AutoGate_RenameGateDone = "Portão Automático renomeado com sucesso!",
+}

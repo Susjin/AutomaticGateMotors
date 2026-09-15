@@ -1,0 +1,7 @@
+ItemName_ES = {
+ 
+    /* Version 1.0 */
+	ItemName_AutoGate.GateController = "Mando de puerta automática",
+	ItemName_AutoGate.GateComponents = "Motor de puerta automática",
+	ItemName_AutoGate.AutoGateMag = "Todo sobre las puertas automáticas",
+}

@@ -1,0 +1,18 @@
+IGUI_CN = {
+ 
+ 	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "自动门闸机已成功安装！",
+	IGUI_AutoGate_Installing = "正在安装自动门闸机...",
+	IGUI_AutoGate_ConnectControllerDone = "自动门闸机遥控器已成功配对！",
+	IGUI_AutoGate_ClearingController   = "正在解除配对自动门闸机遥控器...",
+	IGUI_AutoGate_ClearControllerDone   = "自动门闸机遥控器已解除配对！",
+	IGUI_AutoGate_CopyingFrom = "正在获取配对频道信息...",
+	IGUI_AutoGate_CopyingTo = "正在设置配对频道信息...",
+	IGUI_AutoGate_CopyingDone = "已成功复制遥控器配对频道信息！",
+	IGUI_AutoGate_GateResetting = "正在清除配对频道信息...",
+	IGUI_AutoGate_GateReset = "已清除自动门闸机配对频道信息！",
+	
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "重命名自动门",
+	IGUI_AutoGate_RenameGateDone = "自动门已成功重命名！",
+}

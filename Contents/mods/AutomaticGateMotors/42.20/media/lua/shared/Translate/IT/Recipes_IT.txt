@@ -1,0 +1,9 @@
+Recipes_IT = {
+
+	/* Version 1.0 */
+	Recipe_Create_Controller = "Crea il Telecomando del Cancello",
+	Recipe_Create_Gate_Components = "Crea il Motore del Cancello",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Installa il Motore del Cancello",
+}

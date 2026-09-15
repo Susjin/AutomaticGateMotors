@@ -1,0 +1,37 @@
+Tooltip_RU = {
+
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Автоматические ворота с двигателем",
+	Tooltip_AutoGate_InstallComponents = "Установка мотора автоматических ворот",
+	Tooltip_AutoGate_InstallComponentsDescription = "Ворота с установленным автоматическим приводом ворот можно открывать/закрывать удаленно с помощью подключенного контроллера автоматических ворот.",
+	Tooltip_AutoGate_Connecting = "Подключение контроллера автоматических ворот",
+	Tooltip_AutoGate_ConnectingDescription = "Подключение автоматического контроллера ворот к этим воротам позволяет удаленно открывать/закрывать ворота.",
+	Tooltip_AutoGate_Copy = "Копирование частот контроллера автоматических ворот",
+	Tooltip_AutoGate_CopyDescription = "Копирует частоту выбранного контроллера автоматических ворот на другой контроллер.",
+	Tooltip_AutoGate_Open = "Использование автоматического контроллера ворот",
+	Tooltip_AutoGate_OpenDescription = "Переключает текущие подключенные автоматические ворота.",
+	Tooltip_AutoGate_LockGate = "Запиреть автоматические ворота",
+	Tooltip_AutoGate_LockGateDescription = "Блокирует вортоа, которые: <LINE> выбраны или: <LINE> подключены к выбранному контроллеру.",
+	Tooltip_AutoGate_UnlockGate = "Отпиреть автоматические ворота",
+	Tooltip_AutoGate_UnlockGateDescription = "Разблокирует ворота, которые: <LINE> выбраны или: <LINE> подключены к выбранному контроллеру.",
+	Tooltip_AutoGate_Reset = "Сброс частоты контроллера",
+	Tooltip_AutoGate_ResetDescription = "Сбрасывает частотный код текущего выбранного контроллера.",
+	Tooltip_AutoGate_ClearController = "Отключение контроллера автоматических ворот",
+	Tooltip_AutoGate_ClearControllerDescription = "Отключает текущий выбранный контроллер от автоматических ворот.",
+	Tooltip_AutoGate_UndoneDescription = "ЭТО ДЕЙСТВИЕ НЕ МОЖЕТ БЫТЬ ОТМЕНЕНО! <LINE> УБЕДИТЕСЬ, ЧТО ВОРОТА РАЗБЛОКИРОВАНЫ!",
+	Tooltip_AutoGate_UndoneFootNote = "Вы можете подключить контроллер, только если ворота не блокированы."
+	Tooltip_AutoGate_CantInstallFootNote = "Невозможно установить двигатель, когда ворота открыты!"
+	Tooltip_AutoGate_CantLock = "Невозможно запереть ворота, пока они открыты!"
+	Tooltip_AutoGate_BatteryCharge = "Заряд батареи ворот",
+	Tooltip_AutoGate_NoBatteries = "Нужен любой автомобильный аккумулятор на ворота",
+	Tooltip_AutoGate_GateNotFound = "Автоматические ворота, подключенные к этому контроллеру <LINE>, находятся вне диапазона вещания!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "Возможно, он был уничтожен или его частота была сброшена.",
+	Tooltip_AutoGate_GateComponents = "Установите этот двигатель на любые деревянные ворота, чтобы открывать и закрывать их через контроллер.",
+	Tooltip_AutoGate_AutoGateMagazine = "Руководство по эксплуатации со всеми схемами и процедурами изготовления автоматических ворот.",
+	
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Переименование автоматических ворот",
+	Tooltip_AutoGate_RenameDescription = "Измените имя текущих выбранных автоматических ворот на любое другое имя. Подключенные контроллеры будут иметь одно и то же имя.",
+	Tooltip_AutoGate_RenameFootNote = "Уже подключенные контроллеры будут переименованы после использования.",
+	Tooltip_AutoGate_GateController = "Этот контроллер можно использовать для открытия и закрытия подключенных ворот с установленным автоматическим двигателем ворот. (Можно повесить на пояс)",
+}

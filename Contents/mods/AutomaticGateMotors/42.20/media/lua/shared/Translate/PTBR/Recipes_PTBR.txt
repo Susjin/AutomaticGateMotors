@@ -1,0 +1,9 @@
+Recipes_PTBR = {
+
+	/* Version 1.0 */
+	Recipe_Create_Controller = "Montar Controle do Portão Automático",
+	Recipe_Create_Gate_Components = "Montar Motor de Portão Automático",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Instalação do Motor do Portão Automático",
+}

@@ -1,0 +1,25 @@
+Sandbox_ES = {
+ 
+    /* Version 1.0 */
+	Sandbox_AutoGate = "Motores de puertas automáticas",
+ 
+	Sandbox_AutoGate_AutoLockGate = "Cerrar puertas automáticamente.",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "Siempre que la puerta sea cerrada con un mando, también se bloqueará.",
+	Sandbox_AutoGate_ControllerRange = "Rango del mando",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Rango máximo en el que un mando podrá interactuar con la puerta.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Usos totales de la batería",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Usos totales que cada batería puede tener.",
+ 
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Requerimientos para la instalación del motor.",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Nivel de metalistería necesario para la instalación del motor.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Requerimientos para interactuar con el mando.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Nivel de electrónica necesario para interactuar con el mando.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Requerimientos para interactuar con la puerta.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Nivel de mecánica necesario para interactuar con la puerta.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Requisitos para la creación de mandos.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Nivel de electrónica necesario para crear mandos. (necesario reiniciar)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Requisitos para la creación de motores.",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Nivel de electrónica necesario para crear motores. (necesario reiniciar)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Requisitos para la creación de motores.",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Nivel de mecánica necesario para crear motores. (necesario reiniciar)",
+}

@@ -1,0 +1,7 @@
+ItemName_PTBR = {
+
+	/* Version 1.0 */
+	ItemName_AutoGate.GateController = "Controle do Portão Automático",
+	ItemName_AutoGate.GateComponents = "Motor de Portão Automático",
+	ItemName_AutoGate.AutoGateMag = "Tudo sobre Portões Automáticos",
+}

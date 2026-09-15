@@ -1,0 +1,7 @@
+ItemName_FR = {
+ 
+	/* Version 1.0 */
+	ItemName_AutoGate.GateController = "Télécommande de Portail Automatique",
+	ItemName_AutoGate.GateComponents = "Moteur de Portail Automatique",
+	ItemName_AutoGate.AutoGateMag = "Tout sur les Portails Automatiques",
+}

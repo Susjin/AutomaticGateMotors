@@ -1,0 +1,51 @@
+module AutoGate
+{
+	imports
+	{
+		Base
+	}
+
+	recipe Create Controller
+	{
+		keep [Recipe.GetItemTypes.Screwdriver],
+		RadioTransmitter= 1,
+		RadioReceiver= 1,
+		ElectricWire=1,
+		ElectronicsScrap=2,
+		Aluminum=2,
+		Screws=2,
+		/** Will require Electrical 2 to make **/
+		
+		Result: GateController=1,
+		Time:150.0,
+		Category: Engineer,
+		NeedToBeLearn: true,
+		AnimNode:Disassemble,
+		Prop1:Source=1,
+		Prop2:Source=3,
+		Sound:Dismantle,
+	}
+
+	recipe Create Gate Components
+	{
+		keep Wrench,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		EngineParts=3,
+		Screws=8,
+		SheetMetal=2,
+		MetalBar=2,
+		ElectricWire=2,
+		RadioReceiver=1,
+		RadioTransmitter=1,
+		/** Will require Electrical 3 and Mechanics 4 to make **/
+		
+		Result: GateComponents=1,
+		Time: 600.0,
+		Category: Engineer,
+		NeedToBeLearn: true,
+		AnimNode:Disassemble,
+		Prop1:Source=1,
+		Prop2:Source=3,
+		Sound:RepairWithWrench,
+	}
+}

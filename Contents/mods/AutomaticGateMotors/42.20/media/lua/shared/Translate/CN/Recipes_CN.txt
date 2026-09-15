@@ -1,0 +1,9 @@
+Recipes_CN = {
+ 
+	/* Version 1.0 */
+	Recipe_Create_Controller = "制造自动门闸机遥控器",
+	Recipe_Create_Gate_Components = "制造自动门闸机",
+	
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "安装自动门闸机",
+}

@@ -1,0 +1,9 @@
+Recipes_EN = {
+
+    /* Version 1.0 */
+	Recipe_Create_Controller = "Make Automatic Gate Controller",
+	Recipe_Create_Gate_Components = "Make Automatic Gate Motor",
+
+	/* Version 1.1 */
+	Recipe_CanInstallGate = "Install Automatic Gate Motor",
+}

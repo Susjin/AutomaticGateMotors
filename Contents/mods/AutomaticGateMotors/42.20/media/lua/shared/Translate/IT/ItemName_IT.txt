@@ -1,0 +1,6 @@
+ItemName_IT = {
+
+	ItemName_AutoGate.GateController = "Telecomando del Cancello",
+	ItemName_AutoGate.GateComponents = "Motore del Cancello",
+	ItemName_AutoGate.AutoGateMag = "Tutto sui Cancelli Automatici",
+}

@@ -1,0 +1,37 @@
+Tooltip_PTBR = {
+
+	/* Version 1.0 */
+	Tooltip_AutoGate_AutomaticGateMotor = "Portão Automático com Motor",
+	Tooltip_AutoGate_InstallComponents = "Instalando Motor de Portão Automático",
+	Tooltip_AutoGate_InstallComponentsDescription = "Portões que possuem um Motor de Portão Automático instalado podem ser abertos/fechados remotamente usando um Controle do Portão Automático conectado.",
+	Tooltip_AutoGate_Connecting = "Conectando Controle do Portão Automático",
+	Tooltip_AutoGate_ConnectingDescription = "Conectar um Controle do Portão Automático à este portão o permite ser usado para abrir/fechar o portão remotamente.",
+	Tooltip_AutoGate_Copy = "Copiando Controle do Portão Automático",
+	Tooltip_AutoGate_CopyDescription = "Copia a frequência do controle do portão automático selecionado para um controle desconectado",
+	Tooltip_AutoGate_Open = "Usando Controle do Portão Automático",
+	Tooltip_AutoGate_OpenDescription = "Abre/fecha o portão automático conectado.",
+	Tooltip_AutoGate_LockGate = "Trancando Portão Automático",
+	Tooltip_AutoGate_LockGateDescription = "Tranca o portão automático que foi: <LINE> Selecionado, ou: <LINE> Conectado ao controle selecionado.",
+	Tooltip_AutoGate_UnlockGate = "Destrancando Portão Automático",
+	Tooltip_AutoGate_UnlockGateDescription = "Destranca o portão automático que foi: <LINE> Selecionado, ou: <LINE> Conectado ao controle selecionado.",
+	Tooltip_AutoGate_Reset = "Reinciando Frequência do Portão Automático",
+	Tooltip_AutoGate_ResetDescription = "Reinicia a frequência do portão automático atualmente selecionado",
+	Tooltip_AutoGate_ClearController = "Desconectando Controle do Portão Automático",
+	Tooltip_AutoGate_ClearControllerDescription = "Desconecta o controle atualmente selecionado de seu portão automático",
+	Tooltip_AutoGate_UndoneDescription = "ESTA AÇÃO NÃO PODE SER DESFEITA! <LINE> GARANTA QUE O PORTÃO ESTÁ DESTRAVADO!",
+	Tooltip_AutoGate_UndoneFootNote = "Só é possível se conectar ao portão quando ele está destravado.",
+	Tooltip_AutoGate_CantInstallFootNote = "Não é possível instalar o motor com o portão aberto!"
+	Tooltip_AutoGate_CantLock = "Não é possível trancar o portão quando ele está aberto!",
+	Tooltip_AutoGate_BatteryCharge = "Energia de bateria no portão",
+	Tooltip_AutoGate_NoBatteries = "Qualquer bateria de carro no portão",
+	Tooltip_AutoGate_GateNotFound = "O portão automático conectado a este controle <LINE> está fora do seu alcance de transmissão!",
+	Tooltip_AutoGate_GateNotFoundFootNote = "Talvez tenha sido destruído/sua frequência reiniciada",
+	Tooltip_AutoGate_GateComponents = "Instale em qualquer portão de madeira para o abrir/fechar através de um controle.",
+	Tooltip_AutoGate_AutoGateMagazine = "Manual de instruções contendo projetos e procedimentos para montar Portões Automáticos.",
+	
+	/* Version 1.1 */
+	Tooltip_AutoGate_Rename = "Renomeando Portão Automático",
+	Tooltip_AutoGate_RenameDescription = "Altera o nome do portão automático atualmente selecionado para qualquer nome. Controles que forem conectados terão o mesmo nome.",
+	Tooltip_AutoGate_RenameFootNote = "Controles já conectados serão renomeados após o uso.",
+	Tooltip_AutoGate_GateController = "Pode ser usado para abrir/fechar um portão conectado com um Motor de Portão Automático instalado.",
+}

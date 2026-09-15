@@ -1,0 +1,26 @@
+Sandbox_EN = {
+
+	/* Version 1.0 */
+	Sandbox_AutoGate = "Automatic Gate Motors",
+
+	Sandbox_AutoGate_AutoLockGate = "Trancar portão automaticamente",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "Toda vez que um portão for fechado por um controle, ele será trancado.",
+	Sandbox_AutoGate_ControllerRange = "Alcance do controle",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Alcance máximo em que um controle consegue interagir com um portão.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Total de usos da bateria",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Total de usos que cada bateria terá.",
+	
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Requisitos para instalação do motor",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Nível de Metalurgia necessária para a instalação do motor.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Requisitos para interação com um controle",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Nível de Elétrica necessária para a interação com um controle.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Requisitos para interação com um portão",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Nível de Mecânica necessária para a interação com um portão.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Requisitos para montar controles",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Nível de Elétrica necessária para montar controles. (requer reinício)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Requisitos para montar motores",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Nível de Elétrica necessária para montar motores de portão. (requer reinício)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Requisitos para montar motores",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Nível de Mecânica necessária para montar motores de portão. (requer reinício)",
+	
+}

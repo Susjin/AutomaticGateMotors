@@ -1,0 +1,25 @@
+Sandbox_EN = {
+
+    /* Version 1.0 */
+	Sandbox_AutoGate = "Automatic Gate Motors",
+
+	Sandbox_AutoGate_AutoLockGate = "Automatically lock gate",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "Everytime the gate is closed by a controller, it will also be locked.",
+	Sandbox_AutoGate_ControllerRange = "Controller mange",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Max range that a controller can interact with the gate.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Battery total uses",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Total uses each battery can have.",
+	
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Motor installation requirements",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Level of Metalworking required to install gate motor.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Controller interaction requirements",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Level of Electrical required to interact with the controller.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Gate interaction requirements",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Level of Mechanics required to interact with the gate.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Make controller requirements",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Level of Electrical required to make controllers. (needs restart)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Make gate motor requirements",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Level of Electrical required to make a gate motors. (needs restart)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Make gate motor requirements",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Level of Mechanics required to make a gate motors. (needs restart)",
+}

@@ -1,0 +1,18 @@
+IGUI_FR = {
+ 
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "Portail Automatique installé avec succès!",
+	IGUI_AutoGate_Installing = "Installation du Moteur du Portail Automatique...",
+	IGUI_AutoGate_ConnectControllerDone = "Télécommande du Portail Automatique connectée!",
+	IGUI_AutoGate_ClearingController   = "Déconnexion de la Télécommande...",
+	IGUI_AutoGate_ClearControllerDone   = "Télécommande du Portail Automatique déconnectée!",
+	IGUI_AutoGate_CopyingFrom = "Récupération de la Fréquence...",
+	IGUI_AutoGate_CopyingTo = "Paramétrage de la Fréquence...",
+	IGUI_AutoGate_CopyingDone = "Télécommande du Portail Automatique copiée avec succès!",
+	IGUI_AutoGate_GateResetting = "Réinitialisation de la Fréquence...",
+	IGUI_AutoGate_GateReset = "Fréquence du Portail Automatique réinitialisée",
+	
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Changer le nom du Portail Automatique",
+	IGUI_AutoGate_RenameGateDone = "Portail Automatique renommé avec succès!",
+}

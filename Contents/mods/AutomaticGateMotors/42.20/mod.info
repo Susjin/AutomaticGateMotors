@@ -1,0 +1,20 @@
+name=Automatic Gate Motors
+id=AutomaticGateMotors
+description=Adds ways of remotely open and close gates that where built by a player. (Works inside cars!)
+icon=icon.png
+authors=peteR
+
+modversion=1.1.6
+versionMin=41.78
+tags=Build 41,Building,Misc
+
+pack=AutoGate
+tiledef=AutoGate 3452
+url=https://github.com/Susjin/AutomaticGateMotors
+
+poster=posters/poster.png
+poster=posters/poster1_gates.png
+poster=posters/poster2_install.png
+poster=posters/poster3_installing.png
+poster=posters/poster4_use.png
+poster=posters/poster7_useinv.png

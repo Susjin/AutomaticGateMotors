@@ -1,0 +1,18 @@
+IGUI_EN = {
+
+	/* Version 1.0 */
+	IGUI_AutoGate_InstallComplete = "Automatic gate successfully installed!",
+	IGUI_AutoGate_Installing = "Installing Automatic Gate Motor...",
+	IGUI_AutoGate_ConnectControllerDone = "Automatic gate controller connected!",
+	IGUI_AutoGate_ClearingController   = "Disconnecting controller...",
+	IGUI_AutoGate_ClearControllerDone   = "Automatic gate controller disconnected!",
+	IGUI_AutoGate_CopyingFrom = "Getting frequency...",
+	IGUI_AutoGate_CopyingTo = "Setting frequency...",
+	IGUI_AutoGate_CopyingDone = "Automatic Gate Controller successfully copied!",
+	IGUI_AutoGate_GateResetting = "Resetting frequency...",
+	IGUI_AutoGate_GateReset = "Automatic gate frequency reset!",
+
+	/* Version 1.1 */
+	IGUI_AutoGate_RenameGate = "Change the name of this Automatic Gate",
+	IGUI_AutoGate_RenameGateDone = "Automatic Gate successfully renamed!",
+}

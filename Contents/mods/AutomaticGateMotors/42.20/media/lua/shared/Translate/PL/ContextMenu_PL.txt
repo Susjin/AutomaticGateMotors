@@ -1,0 +1,17 @@
+ContextMenu_PL = {
+ 
+	/* Version 1.0 */
+	ContextMenu_AutoGate_InstallComponents = "Zainstaluj Motor Automatycznej Bramy",
+	ContextMenu_AutoGate_ConnectController = "Po³¹cz Kontroler Automatycznej Bramy",
+	ContextMenu_AutoGate_UseController = "U¿yj Kontrolera",
+	ContextMenu_AutoGate_Copy = "Skopiuj Czêstotliwoœæ Automatycznej Bramy",
+	ContextMenu_AutoGate_ClearController = "Roz³¹cz Kontroler Automatycznej Bramy",
+	ContextMenu_AutoGate_LockGate = "Zablokuj Automatyczn¹ Bramê",
+	ContextMenu_AutoGate_UnlockGate = "Odblokuj Automatyczn¹ Bramê",
+	ContextMenu_AutoGate_ResetGate = "Reset Czêstotliwoœci Automatycznej Bramy",
+	ContextMenu_AutoGate_GateMenu = "Automatyczna Brama",
+	ContextMenu_AutoGate_ControllerMenu = "Kontroler Automatycznej Bramy",
+ 
+	/* Version 1.1 */
+	ContextMenu_AutoGate_RenameGate = "Zmieñ Nazwê Automatycznej Bramy",
+}

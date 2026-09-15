@@ -1,0 +1,26 @@
+Sandbox_FR = {
+ 
+	/* Version 1.0 */
+	Sandbox_AutoGate = "Moteurs de Portail Automatique",
+ 
+	Sandbox_AutoGate_AutoLockGate = "Verrouiller le Portail automatiquement",
+	Sandbox_AutoGate_AutoLockGate_tooltip = "A chaque fois que le Portail est fermé par une Télécommande, il est aussi verrouillé.",
+	Sandbox_AutoGate_ControllerRange = "Distance de la Télécommande",
+	Sandbox_AutoGate_ControllerRange_tooltip = "Distance maximale à laquelle une Télécommande peut interagir avec un Portail.",
+	Sandbox_AutoGate_BatteryMaxUseCount = "Utilisations totales de la batterie",
+	Sandbox_AutoGate_BatteryMaxUseCount_tooltip = "Utilisations totales qu'une batterie peut avoir.",
+ 
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding = "Conditions de l'installation du Moteur",
+	Sandbox_AutoGate_LevelRequirementsInstallMetalWelding_tooltip = "Niveau de Travail des métaux requis pour installer un Moteur de Portail.",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction = "Conditions de l'interaction avec la Télécommande",
+	Sandbox_AutoGate_LevelRequirementsControllerInteraction_tooltip = "Niveau d'Electricité requis pour interagir avec la télécommande.",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction = "Conditions de l'interaction avec le Portail",
+	Sandbox_AutoGate_LevelRequirementsGateInteraction_tooltip = "Niveau de Mécanique requis pour interagir avec le Portail.",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical = "Conditions pour créer une Télécommande",
+	Sandbox_AutoGate_LevelRequirementsMakeControllerElectrical_tooltip = "Niveau d'Electricité requis pour créer des Télécommandes. (nécessite un redémarrage)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical = "Conditions pour créer un Moteur de Portail",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsElectrical_tooltip = "Niveau d'Electricité requis pour créer des Moteurs de Portail. (nécessite un redémarrage)",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics = "Conditions pour créer un Moteur de Portail",
+	Sandbox_AutoGate_LevelRequirementsMakeComponentsMechanics_tooltip = "Niveau de Mécanique requis pour créer des Moteurs de Portail. (nécessite un redémarrage)",
+ 
+}
